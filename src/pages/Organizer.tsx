@@ -29,7 +29,7 @@ const OrganizerPage = () => {
 
   return (
     <AppLayout>
-      <div className="max-w-[1400px] mx-auto space-y-[var(--spacing-uniform)]">
+      <div className="space-y-4 md:space-y-[var(--spacing-uniform)] lg:space-y-[var(--spacing-lg)]">
         <div>
           <h1 className="text-2xl md:text-3xl font-semibold">Organizér</h1>
           <p className="text-muted-foreground text-sm mt-1">Naplánujte si mesiac: 3/2026</p>

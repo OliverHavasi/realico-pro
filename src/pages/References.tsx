@@ -16,7 +16,7 @@ const ReferencesPage = () => {
 
   return (
     <AppLayout>
-      <div className="max-w-[1400px] mx-auto space-y-[var(--spacing-uniform)]">
+      <div className="space-y-4 md:space-y-[var(--spacing-uniform)] lg:space-y-[var(--spacing-lg)]">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h1 className="text-2xl md:text-3xl font-semibold text-foreground">Zoznam referencií</h1>

@@ -12,14 +12,14 @@ export function AppLayout({ children }: AppLayoutProps) {
       <div className="min-h-screen flex w-full">
         <AppSidebar />
         <div className="flex-1 flex flex-col min-w-0">
-          <header className="h-16 flex items-center justify-between px-8 sticky top-0 z-30">
-            <div className="flex items-center gap-3">
-              <div className="hidden md:flex items-center gap-2 bg-secondary rounded-[var(--radius)] px-5 h-[var(--interactive-height)]">
-                <Search className="h-4 w-4 text-muted-foreground" />
+          <header className="h-16 flex items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-10 sticky top-0 z-30">
+            <div className="flex items-center gap-3 flex-1 max-w-2xl">
+              <div className="hidden md:flex items-center gap-2 bg-secondary rounded-[var(--radius)] px-5 h-[var(--interactive-height)] flex-1 max-w-xl">
+                <Search className="h-4 w-4 text-muted-foreground shrink-0" />
                 <input
                   type="text"
                   placeholder="Vyhľadávanie..."
-                  className="bg-transparent border-none outline-none text-sm font-medium placeholder:text-muted-foreground w-56"
+                  className="bg-transparent border-none outline-none text-sm font-medium placeholder:text-muted-foreground w-full"
                 />
               </div>
             </div>
@@ -30,8 +30,10 @@ export function AppLayout({ children }: AppLayoutProps) {
               </button>
             </div>
           </header>
-          <main className="flex-1 px-8 py-6 max-w-[1600px]">
-            {children}
+          <main className="flex-1 px-4 sm:px-6 lg:px-8 xl:px-10 py-6 w-full">
+            <div className="w-full max-w-[1800px] mx-auto">
+              {children}
+            </div>
           </main>
         </div>
       </div>

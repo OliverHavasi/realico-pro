@@ -15,7 +15,7 @@ const ClientsPage = () => {
 
   return (
     <AppLayout>
-        <div className="max-w-[1600px] mx-auto space-y-[var(--spacing-uniform)]">
+        <div className="space-y-4 md:space-y-[var(--spacing-uniform)] lg:space-y-[var(--spacing-lg)]">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <h1 className="text-2xl font-semibold tracking-wide text-foreground">Zoznam klientov</h1>
