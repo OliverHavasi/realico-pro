@@ -15,10 +15,10 @@ const ClientsPage = () => {
 
   return (
     <AppLayout>
-      <div className="max-w-[1400px] mx-auto space-y-[var(--spacing-uniform)]">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div>
-            <h1 className="text-2xl md:text-3xl font-semibold text-foreground">Zoznam klientov</h1>
+        <div className="max-w-[1600px] mx-auto space-y-[var(--spacing-uniform)]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <h1 className="text-2xl font-semibold tracking-tight text-foreground">Zoznam klientov</h1>
             <p className="text-muted-foreground text-sm mt-1">37 146 záznamov</p>
           </div>
           <div className="flex gap-3 self-start">
@@ -51,8 +51,8 @@ const ClientsPage = () => {
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="border-b border-border">
-                  <th className="text-left px-5 py-4 text-xs text-muted-foreground uppercase tracking-wider">Vložil</th>
+                <tr className="border-b border-border/40">
+                  <th className="text-left px-5 py-4 text-xs font-medium text-muted-foreground uppercase tracking-wider">Vložil</th>
                   <th className="text-left px-5 py-4 text-xs text-muted-foreground uppercase tracking-wider">Meno klienta</th>
                   <th className="text-left px-5 py-4 text-xs text-muted-foreground uppercase tracking-wider">Kontakt</th>
                   <th className="text-left px-5 py-4 text-xs text-muted-foreground uppercase tracking-wider">Typ</th>
@@ -63,7 +63,7 @@ const ClientsPage = () => {
               </thead>
               <tbody>
                 {clients.map((client) => (
-                  <tr key={client.name} className="border-b border-border last:border-0 hover:bg-secondary/40 transition-colors">
+                  <tr key={client.name} className="border-b border-border/30 last:border-0 hover:bg-secondary/40 transition-colors">
                     <td className="px-5 py-4">
                       <p className="text-xs text-muted-foreground">{client.date}</p>
                       <p className="text-xs text-muted-foreground">{client.agent}</p>
