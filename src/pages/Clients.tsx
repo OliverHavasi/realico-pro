@@ -18,7 +18,7 @@ const ClientsPage = () => {
         <div className="max-w-[1600px] mx-auto space-y-[var(--spacing-uniform)]">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <h1 className="text-2xl font-semibold tracking-tight text-foreground">Zoznam klientov</h1>
+              <h1 className="text-2xl font-semibold tracking-wide text-foreground">Zoznam klientov</h1>
             <p className="text-muted-foreground text-sm mt-1">37 146 záznamov</p>
           </div>
           <div className="flex gap-3 self-start">
@@ -34,12 +34,12 @@ const ClientsPage = () => {
         {/* Filters */}
         <div className="glass-card p-5">
           <div className="flex flex-wrap gap-3">
-            <div className="flex items-center gap-2 bg-background rounded-[var(--radius-input)] px-4 h-[var(--interactive-height)] border border-input flex-1 min-w-[200px] focus-within:border-primary focus-within:ring-[3px] focus-within:ring-primary/20 transition-all">
+            <div className="flex items-center gap-2 bg-background rounded-[var(--radius)] px-4 h-[var(--interactive-height)] border border-input flex-1 min-w-[200px] focus-within:border-primary focus-within:ring-[3px] focus-within:ring-primary/20 transition-all">
               <Search className="h-4 w-4 text-muted-foreground shrink-0" />
               <input type="text" placeholder="Vyhľadávanie..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="bg-transparent border-none outline-none text-[0.875rem] placeholder:text-muted-foreground w-full" />
             </div>
             {["Maklér", "Pobočka", "Typ klienta"].map((filter) => (
-              <select key={filter} className="h-[var(--interactive-height)] px-4 rounded-[var(--radius-input)] border border-input bg-background text-sm text-muted-foreground hover:border-primary/40 transition-colors appearance-none cursor-pointer min-w-[140px]">
+              <select key={filter} className="h-[var(--interactive-height)] px-4 rounded-[var(--radius)] border border-input bg-background text-sm text-muted-foreground hover:border-primary/40 transition-colors appearance-none cursor-pointer min-w-[140px]">
                 <option>- {filter.toLowerCase()} -</option>
               </select>
             ))}
@@ -51,19 +51,19 @@ const ClientsPage = () => {
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="border-b border-border/40">
+                <tr className="border-b border-border/10">
                   <th className="text-left px-5 py-4 text-xs font-medium text-muted-foreground uppercase tracking-wider">Vložil</th>
-                  <th className="text-left px-5 py-4 text-xs text-muted-foreground uppercase tracking-wider">Meno klienta</th>
-                  <th className="text-left px-5 py-4 text-xs text-muted-foreground uppercase tracking-wider">Kontakt</th>
-                  <th className="text-left px-5 py-4 text-xs text-muted-foreground uppercase tracking-wider">Typ</th>
-                  <th className="text-center px-5 py-4 text-xs text-muted-foreground uppercase tracking-wider">Ponuky</th>
-                  <th className="text-center px-5 py-4 text-xs text-muted-foreground uppercase tracking-wider">Obhliadky</th>
-                  <th className="text-right px-5 py-4 text-xs text-muted-foreground uppercase tracking-wider">Akcie</th>
+                  <th className="text-left px-5 py-4 text-xs font-medium text-muted-foreground uppercase tracking-wider">Meno klienta</th>
+                  <th className="text-left px-5 py-4 text-xs font-medium text-muted-foreground uppercase tracking-wider">Kontakt</th>
+                  <th className="text-left px-5 py-4 text-xs font-medium text-muted-foreground uppercase tracking-wider">Typ</th>
+                  <th className="text-center px-5 py-4 text-xs font-medium text-muted-foreground uppercase tracking-wider">Ponuky</th>
+                  <th className="text-center px-5 py-4 text-xs font-medium text-muted-foreground uppercase tracking-wider">Obhliadky</th>
+                  <th className="text-right px-5 py-4 text-xs font-medium text-muted-foreground uppercase tracking-wider">Akcie</th>
                 </tr>
               </thead>
               <tbody>
                 {clients.map((client) => (
-                  <tr key={client.name} className="border-b border-border/30 last:border-0 hover:bg-secondary/40 transition-colors">
+                  <tr key={client.name} className="border-b border-border/10 last:border-0 hover:bg-secondary/40 transition-colors">
                     <td className="px-5 py-4">
                       <p className="text-xs text-muted-foreground">{client.date}</p>
                       <p className="text-xs text-muted-foreground">{client.agent}</p>
@@ -74,7 +74,7 @@ const ClientsPage = () => {
                           <span className="text-xs font-medium text-primary">{client.initials}</span>
                         </div>
                         <div>
-                          <p className="text-sm font-medium text-foreground">{client.name}</p>
+                          <p className="text-sm text-foreground">{client.name}</p>
                           {client.phone && <p className="text-xs text-muted-foreground flex items-center gap-1"><Phone className="h-3 w-3" />{client.phone}</p>}
                         </div>
                       </div>
