@@ -47,7 +47,7 @@ const Index = () => {
       <div className="max-w-[1600px] mx-auto space-y-[var(--spacing-uniform)]">
         {/* Header */}
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight">Nástenka</h1>
+          <h1 className="text-2xl font-semibold tracking-wide">Nástenka</h1>
           <p className="text-muted-foreground text-sm font-medium mt-1">Naplánujte si mesiac: 3/2026</p>
         </div>
 

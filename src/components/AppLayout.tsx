@@ -14,12 +14,12 @@ export function AppLayout({ children }: AppLayoutProps) {
         <div className="flex-1 flex flex-col min-w-0">
           <header className="h-16 flex items-center justify-between px-8 sticky top-0 z-30">
             <div className="flex items-center gap-3">
-              <div className="hidden md:flex items-center gap-2 bg-secondary rounded-[var(--radius-input)] px-5 h-[var(--interactive-height)]">
+              <div className="hidden md:flex items-center gap-2 bg-secondary rounded-[var(--radius)] px-5 h-[var(--interactive-height)]">
                 <Search className="h-4 w-4 text-muted-foreground" />
                 <input
                   type="text"
                   placeholder="Vyhľadávanie..."
-                  className="bg-transparent border-none outline-none text-sm font-medium placeholder:text-muted-foreground w-48"
+                  className="bg-transparent border-none outline-none text-sm font-medium placeholder:text-muted-foreground w-56"
                 />
               </div>
             </div>
@@ -30,7 +30,7 @@ export function AppLayout({ children }: AppLayoutProps) {
               </button>
             </div>
           </header>
-          <main className="flex-1 px-8 py-6">
+          <main className="flex-1 px-8 py-6 max-w-[1600px]">
             {children}
           </main>
         </div>
