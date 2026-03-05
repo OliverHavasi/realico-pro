@@ -44,7 +44,7 @@ const announcements = [
 const Index = () => {
   return (
     <AppLayout>
-      <div className="max-w-[1600px] mx-auto space-y-[var(--spacing-uniform)]">
+      <div className="space-y-4 md:space-y-[var(--spacing-uniform)] lg:space-y-[var(--spacing-lg)]">
         {/* Header */}
         <div>
           <h1 className="text-2xl font-semibold tracking-wide">Nástenka</h1>
@@ -52,7 +52,7 @@ const Index = () => {
         </div>
 
         {/* Stat Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[var(--spacing-uniform)]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
           {stats.map((stat) => (
             <div key={stat.label} className="glass-card p-6 flex flex-col gap-3">
               <div className="flex items-center justify-between">
@@ -68,7 +68,7 @@ const Index = () => {
         </div>
 
         {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-[var(--spacing-uniform)]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
           {/* Tasks */}
           <div className="glass-card p-6 lg:col-span-1">
             <div className="flex items-center justify-between mb-5">
@@ -160,7 +160,7 @@ const Index = () => {
               Prejsť na predaje <ArrowRight className="h-3.5 w-3.5" />
             </button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--spacing-uniform)]">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
             {[
               { title: "3 izbový byt s parkovaním", location: "Hurbanovo", price: "18b", date: "27.02.2026", agent: "Monika Delejová" },
               { title: "1 izbový byt, Pod papierňou", location: "Prešov", price: "11b", date: "25.02.2026", agent: "Monika Delejová" },

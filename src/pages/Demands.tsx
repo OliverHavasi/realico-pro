@@ -13,7 +13,7 @@ const DemandsPage = () => {
 
   return (
     <AppLayout>
-      <div className="max-w-[1400px] mx-auto space-y-[var(--spacing-uniform)]">
+      <div className="space-y-4 md:space-y-[var(--spacing-uniform)] lg:space-y-[var(--spacing-lg)]">
         <div>
           <h1 className="text-2xl md:text-3xl font-semibold text-foreground">Dopyty</h1>
           <p className="text-muted-foreground text-sm mt-1">Správa dopytov na nehnuteľnosti</p>
