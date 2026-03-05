@@ -8,7 +8,6 @@ import {
   Clock,
   ArrowRight,
   Star,
-  MessageSquare,
   Plus,
   Home,
 } from "lucide-react";
@@ -45,11 +44,11 @@ const announcements = [
 const Index = () => {
   return (
     <AppLayout>
-      <div className="max-w-[1400px] mx-auto space-y-[var(--spacing-uniform)] px-0">
+      <div className="max-w-[1400px] mx-auto space-y-[var(--spacing-uniform)]">
         {/* Header */}
         <div>
-          <h1 className="text-2xl md:text-3xl font-semibold">Nástenka</h1>
-          <p className="text-muted-foreground text-sm mt-1">Naplánujte si mesiac: 3/2026</p>
+          <h1 className="text-2xl font-bold tracking-tight">Nástenka</h1>
+          <p className="text-muted-foreground text-sm font-medium mt-1">Naplánujte si mesiac: 3/2026</p>
         </div>
 
         {/* Stat Cards */}
@@ -57,13 +56,13 @@ const Index = () => {
           {stats.map((stat) => (
             <div key={stat.label} className="glass-card p-6 flex flex-col gap-3">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">{stat.label}</span>
-                <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
-                  <stat.icon className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium text-muted-foreground">{stat.label}</span>
+                <div className="h-10 w-10 rounded-full bg-[hsl(var(--icon-bg))] flex items-center justify-center">
+                  <stat.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
                 </div>
               </div>
               <span className="stat-number text-foreground">{stat.value}</span>
-              <span className="text-xs text-muted-foreground">{stat.trend}</span>
+              <span className="text-xs font-medium text-muted-foreground">{stat.trend}</span>
             </div>
           ))}
         </div>
@@ -73,22 +72,22 @@ const Index = () => {
           {/* Tasks */}
           <div className="glass-card p-6 lg:col-span-1">
             <div className="flex items-center justify-between mb-5">
-              <h2 className="text-lg font-semibold">Vaše úlohy</h2>
-              <button className="text-muted-foreground text-sm hover:underline flex items-center gap-1">
+              <h2 className="text-lg font-bold tracking-tight">Vaše úlohy</h2>
+              <button className="text-muted-foreground text-sm font-medium hover:text-foreground flex items-center gap-1 transition-colors">
                 Organizér <ArrowRight className="h-3.5 w-3.5" />
               </button>
             </div>
             <div className="space-y-4">
               {tasks.map((group) => (
                 <div key={group.date}>
-                  <p className="text-xs text-muted-foreground mb-2">{group.date}</p>
+                  <p className="text-xs font-medium text-muted-foreground mb-2">{group.date}</p>
                   <div className="space-y-2">
                     {group.items.map((item) => (
-                      <div key={item.text} className="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-secondary/60 transition-colors">
+                      <div key={item.text} className="flex items-center gap-3 py-2.5 px-4 rounded-full hover:bg-secondary transition-colors">
                         <div className={`h-5 w-5 rounded-full flex items-center justify-center shrink-0 ${item.done ? "bg-success" : "border-2 border-muted-foreground/30"}`}>
                           {item.done && <CheckCircle2 className="h-3.5 w-3.5 text-success-foreground" />}
                         </div>
-                        <span className={`text-sm ${item.done ? "line-through text-muted-foreground" : ""}`}>{item.text}</span>
+                        <span className={`text-sm font-medium ${item.done ? "line-through text-muted-foreground" : ""}`}>{item.text}</span>
                       </div>
                     ))}
                   </div>
@@ -100,21 +99,21 @@ const Index = () => {
           {/* References */}
           <div className="glass-card p-6 lg:col-span-1">
             <div className="flex items-center justify-between mb-5">
-              <h2 className="text-lg font-semibold">Najnovšie referencie</h2>
-              <button className="text-muted-foreground text-sm hover:underline flex items-center gap-1">
+              <h2 className="text-lg font-bold tracking-tight">Najnovšie referencie</h2>
+              <button className="text-muted-foreground text-sm font-medium hover:text-foreground flex items-center gap-1 transition-colors">
                 Všetky <ArrowRight className="h-3.5 w-3.5" />
               </button>
             </div>
             <div className="space-y-4">
               {references.map((ref) => (
                 <div key={ref.name} className="flex gap-3 py-3 border-b border-border last:border-0">
-                  <div className="h-10 w-10 rounded-full bg-primary/10 ring-1 ring-primary/40 flex items-center justify-center shrink-0">
-                    <span className="text-sm font-medium text-primary">{ref.initials}</span>
+                  <div className="h-10 w-10 rounded-full bg-[hsl(var(--icon-bg))] ring-1 ring-primary/40 flex items-center justify-center shrink-0">
+                    <span className="text-sm font-semibold text-primary">{ref.initials}</span>
                   </div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-sm font-medium">{ref.name}</span>
-                      <span className="text-xs text-muted-foreground flex items-center gap-1">
+                      <span className="text-sm font-semibold">{ref.name}</span>
+                      <span className="text-xs font-medium text-muted-foreground flex items-center gap-1">
                         <Clock className="h-3 w-3" /> {ref.date}
                       </span>
                     </div>
@@ -131,21 +130,21 @@ const Index = () => {
           {/* Announcements */}
           <div className="glass-card p-6 lg:col-span-1">
             <div className="flex items-center justify-between mb-5">
-              <h2 className="text-lg font-semibold">Dôležité oznamy</h2>
-              <button className="h-[var(--interactive-height)] px-5 rounded-[var(--radius-btn)] bg-primary text-primary-foreground text-sm shadow-primary hover:shadow-primary-hover hover:-translate-y-0.5 active:scale-[0.98] transition-all flex items-center gap-2">
+              <h2 className="text-lg font-bold tracking-tight">Dôležité oznamy</h2>
+              <button className="h-[var(--interactive-height)] px-6 rounded-full bg-primary text-primary-foreground text-[0.9rem] font-semibold shadow-primary hover:shadow-primary-hover hover:-translate-y-0.5 active:scale-[0.98] transition-all flex items-center gap-2">
                 <Plus className="h-4 w-4" /> Nový
               </button>
             </div>
             <div className="space-y-4">
               {announcements.map((ann) => (
-                <div key={ann.date} className="bg-secondary/50 rounded-xl p-4">
+                <div key={ann.date} className="bg-secondary rounded-[10px] p-4">
                   <div className="flex items-center justify-between mb-2">
                     <div>
-                      <p className="text-xs text-muted-foreground">{ann.date}</p>
-                      <p className="text-sm font-medium">{ann.author} <span className="text-muted-foreground font-normal">· {ann.role}</span></p>
+                      <p className="text-xs font-medium text-muted-foreground">{ann.date}</p>
+                      <p className="text-sm font-semibold">{ann.author} <span className="text-muted-foreground font-medium">· {ann.role}</span></p>
                     </div>
                   </div>
-                  <h3 className="text-foreground font-semibold text-lg mb-2">{ann.title}</h3>
+                  <h3 className="text-foreground font-bold text-lg mb-2 tracking-tight">{ann.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{ann.text}</p>
                 </div>
               ))}
@@ -156,8 +155,8 @@ const Index = () => {
         {/* Recent Properties */}
         <div className="glass-card p-6">
           <div className="flex items-center justify-between mb-5">
-            <h2 className="text-lg font-semibold">Najnovší predaj</h2>
-              <button className="text-muted-foreground text-sm hover:underline flex items-center gap-1">
+            <h2 className="text-lg font-bold tracking-tight">Najnovší predaj</h2>
+            <button className="text-muted-foreground text-sm font-medium hover:text-foreground flex items-center gap-1 transition-colors">
               Prejsť na predaje <ArrowRight className="h-3.5 w-3.5" />
             </button>
           </div>
@@ -167,14 +166,14 @@ const Index = () => {
               { title: "1 izbový byt, Pod papierňou", location: "Prešov", price: "11b", date: "25.02.2026", agent: "Monika Delejová" },
               { title: "Luxusne zrekonštruovaný byt", location: "Košice", price: "11b", date: "24.02.2026", agent: "Mária Arvaiová" },
             ].map((property) => (
-              <div key={property.title} className="bg-secondary/40 rounded-xl p-4 hover:bg-secondary/60 transition-colors">
-                <div className="h-40 bg-muted rounded-lg mb-3 flex items-center justify-center">
-                  <Home className="h-8 w-8 text-muted-foreground/30" />
+              <div key={property.title} className="bg-secondary rounded-[10px] p-4 hover:bg-secondary/80 transition-colors">
+                <div className="h-40 bg-muted rounded-[8px] mb-3 flex items-center justify-center">
+                  <Home className="h-8 w-8 text-muted-foreground/30" strokeWidth={1.5} />
                 </div>
-                <p className="text-xs text-muted-foreground">{property.date} · {property.agent}</p>
-                <h3 className="text-sm font-medium mt-1 line-clamp-1 text-foreground">{property.title}</h3>
+                <p className="text-xs font-medium text-muted-foreground">{property.date} · {property.agent}</p>
+                <h3 className="text-sm font-semibold mt-1 line-clamp-1 text-foreground">{property.title}</h3>
                 <p className="text-xs text-muted-foreground">{property.location}</p>
-                <p className="text-muted-foreground font-medium mt-2 text-sm">Počet bodov: {property.price}</p>
+                <p className="text-muted-foreground font-semibold mt-2 text-sm">Počet bodov: {property.price}</p>
               </div>
             ))}
           </div>
