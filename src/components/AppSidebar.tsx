@@ -27,7 +27,8 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
-import logoSrc from "@/assets/aura_y_w.svg";
+import logoSrc from "@/assets/aura_y.svg";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const mainItems = [
   { title: "Nástenka", url: "/", icon: LayoutDashboard },
@@ -53,20 +54,31 @@ export function AppSidebar() {
   const location = useLocation();
 
   return (
-    <Sidebar collapsible="icon" className="border-r border-sidebar-border">
+    <Sidebar collapsible="icon" className="border-none m-6 mr-0">
       {/* Logo */}
-      <div className="flex h-16 items-center px-5 justify-start">
+      <div className="px-6 pt-6 pb-4">
         {!collapsed ? (
-          <img src={logoSrc} alt="Aura" className="h-7 w-auto" />
+          <img src={logoSrc} alt="Aura" className="h-5 w-auto" />
         ) : (
           <img src={logoSrc} alt="Aura" className="h-4 w-auto object-contain mx-auto" />
         )}
       </div>
 
-      <SidebarContent className="px-2 py-2">
+      {/* Profile Section */}
+      {!collapsed && (
+        <div className="flex flex-col items-center px-6 py-6">
+          <Avatar className="w-16 h-16 border-[3px] border-background shadow-[0_0_30px_hsl(48_100%_50%/0.5)]">
+            <AvatarFallback className="bg-primary/10 text-primary font-semibold text-lg">LP</AvatarFallback>
+          </Avatar>
+          <span className="text-base font-semibold mt-3 text-foreground">Lucia Pastorová</span>
+          <span className="text-sm font-medium text-muted-foreground">Maklér</span>
+        </div>
+      )}
+
+      <SidebarContent className="px-4 py-2">
         <SidebarGroup>
           <SidebarGroupContent>
-            <SidebarMenu className="space-y-[2px]">
+            <SidebarMenu className="space-y-1">
               {mainItems.map((item) => {
                 const isActive = location.pathname === item.url;
                 return (
@@ -75,16 +87,20 @@ export function AppSidebar() {
                       <NavLink
                         to={item.url}
                         end={item.url === "/"}
-                        className={`flex items-center gap-3 h-[34px] px-3 rounded-[var(--radius-sm)] text-[0.8125rem] transition-colors ${
+                        className={`flex items-center gap-3 h-[var(--interactive-height)] px-4 rounded-full text-[14px] transition-colors ${
                           collapsed ? "justify-center" : ""
                         } ${
                           isActive
-                            ? "text-primary font-medium"
-                            : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent"
+                            ? "text-primary font-semibold"
+                            : "text-sidebar-foreground hover:text-foreground hover:bg-sidebar-accent"
                         }`}
                         activeClassName=""
                       >
-                        <item.icon className={`h-[18px] w-[18px] shrink-0 ${isActive ? "text-primary" : ""}`} />
+                        <item.icon
+                          className={`h-5 w-5 shrink-0`}
+                          strokeWidth={isActive ? 2 : 1.5}
+                          color={isActive ? "hsl(var(--primary))" : undefined}
+                        />
                         {!collapsed && <span>{item.title}</span>}
                       </NavLink>
                     </SidebarMenuButton>
