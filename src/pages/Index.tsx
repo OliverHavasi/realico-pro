@@ -44,10 +44,10 @@ const announcements = [
 const Index = () => {
   return (
     <AppLayout>
-      <div className="max-w-[1400px] mx-auto space-y-[var(--spacing-uniform)]">
+      <div className="max-w-[1600px] mx-auto space-y-[var(--spacing-uniform)]">
         {/* Header */}
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">Nástenka</h1>
+          <h1 className="text-2xl font-semibold tracking-tight">Nástenka</h1>
           <p className="text-muted-foreground text-sm font-medium mt-1">Naplánujte si mesiac: 3/2026</p>
         </div>
 
@@ -72,7 +72,7 @@ const Index = () => {
           {/* Tasks */}
           <div className="glass-card p-6 lg:col-span-1">
             <div className="flex items-center justify-between mb-5">
-              <h2 className="text-lg font-bold tracking-tight">Vaše úlohy</h2>
+              <h2 className="text-lg font-semibold tracking-tight">Vaše úlohy</h2>
               <button className="text-muted-foreground text-sm font-medium hover:text-foreground flex items-center gap-1 transition-colors">
                 Organizér <ArrowRight className="h-3.5 w-3.5" />
               </button>
@@ -99,7 +99,7 @@ const Index = () => {
           {/* References */}
           <div className="glass-card p-6 lg:col-span-1">
             <div className="flex items-center justify-between mb-5">
-              <h2 className="text-lg font-bold tracking-tight">Najnovšie referencie</h2>
+              <h2 className="text-lg font-semibold tracking-tight">Najnovšie referencie</h2>
               <button className="text-muted-foreground text-sm font-medium hover:text-foreground flex items-center gap-1 transition-colors">
                 Všetky <ArrowRight className="h-3.5 w-3.5" />
               </button>
@@ -130,7 +130,7 @@ const Index = () => {
           {/* Announcements */}
           <div className="glass-card p-6 lg:col-span-1">
             <div className="flex items-center justify-between mb-5">
-              <h2 className="text-lg font-bold tracking-tight">Dôležité oznamy</h2>
+              <h2 className="text-lg font-semibold tracking-tight">Dôležité oznamy</h2>
               <button className="h-[var(--interactive-height)] px-6 rounded-full bg-primary text-primary-foreground text-[0.9rem] font-semibold shadow-primary hover:shadow-primary-hover hover:-translate-y-0.5 active:scale-[0.98] transition-all flex items-center gap-2">
                 <Plus className="h-4 w-4" /> Nový
               </button>
@@ -144,7 +144,7 @@ const Index = () => {
                       <p className="text-sm font-semibold">{ann.author} <span className="text-muted-foreground font-medium">· {ann.role}</span></p>
                     </div>
                   </div>
-                  <h3 className="text-foreground font-bold text-lg mb-2 tracking-tight">{ann.title}</h3>
+                  <h3 className="text-foreground font-semibold text-lg mb-2 tracking-tight">{ann.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{ann.text}</p>
                 </div>
               ))}
@@ -155,7 +155,7 @@ const Index = () => {
         {/* Recent Properties */}
         <div className="glass-card p-6">
           <div className="flex items-center justify-between mb-5">
-            <h2 className="text-lg font-bold tracking-tight">Najnovší predaj</h2>
+            <h2 className="text-lg font-semibold tracking-tight">Najnovší predaj</h2>
             <button className="text-muted-foreground text-sm font-medium hover:text-foreground flex items-center gap-1 transition-colors">
               Prejsť na predaje <ArrowRight className="h-3.5 w-3.5" />
             </button>
