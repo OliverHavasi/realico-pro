@@ -1,0 +1,205 @@
+@import url('@fontsource/outfit/300.css');
+@import url('@fontsource/outfit/400.css');
+@import url('@fontsource/outfit/500.css');
+@import url('@fontsource/outfit/600.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Outfit', system-ui, sans-serif;
+    --font-display: 'Outfit', system-ui, sans-serif;
+
+    --radius: 12px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-input: 8px;
+    --radius-btn: 8px;
+    --spacing-uniform: 10px;
+    --interactive-height: 38px;
+    --glass-blur: 30px;
+
+    --background: 45 6% 97%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 48 100% 48%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 45 6% 93%;
+    --secondary-foreground: 0 0% 8%;
+
+    --muted: 45 4% 93%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 48 80% 95%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 48 100% 48%;
+    --warning-foreground: 0 0% 8%;
+
+    --border: 0 0% 0% / 0.10;
+    --input: 0 0% 0% / 0.12;
+    --ring: 48 100% 48%;
+
+    --chart-line: 48 100% 48%;
+    --chart-area: 48 100% 90%;
+
+    --shadow-card: 0 6px 20px -6px hsl(0 0% 0% / 0.06);
+    --shadow-card-hover: 0 12px 32px -8px hsl(0 0% 0% / 0.12);
+    --shadow-sm: 0 2px 8px -2px hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 16px -4px hsl(0 0% 0% / 0.08);
+    --shadow-lg: 0 8px 24px -8px hsl(0 0% 0% / 0.12);
+    --shadow-primary: 0 8px 24px -8px hsl(48 100% 48% / 0.5);
+    --shadow-primary-hover: 0 12px 32px -8px hsl(48 100% 48% / 0.7);
+
+    --sidebar-background: 0 0% 11%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 48 100% 48%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 100% / 0.08;
+    --sidebar-ring: 48 100% 48%;
+  }
+
+  .dark {
+    --background: 0 0% 8.5%;
+    --foreground: 0 0% 91%;
+
+    --card: 0 0% 14%;
+    --card-foreground: 0 0% 91%;
+
+    --popover: 0 0% 14%;
+    --popover-foreground: 0 0% 91%;
+
+    --primary: 48 100% 48%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 91%;
+
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 18%;
+    --accent-foreground: 0 0% 91%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 48 100% 48%;
+    --warning-foreground: 0 0% 8%;
+
+    --border: 0 0% 100% / 0.12;
+    --input: 0 0% 100% / 0.12;
+    --ring: 48 100% 48%;
+
+    --chart-line: 48 100% 48%;
+    --chart-area: 48 100% 20%;
+
+    --shadow-card: 0 6px 20px -6px hsl(0 0% 0% / 0.2);
+    --shadow-card-hover: 0 12px 32px -8px hsl(0 0% 0% / 0.3);
+    --shadow-sm: 0 2px 8px -2px hsl(0 0% 0% / 0.15);
+    --shadow-md: 0 4px 16px -4px hsl(0 0% 0% / 0.2);
+    --shadow-lg: 0 8px 24px -8px hsl(0 0% 0% / 0.25);
+    --shadow-primary: 0 8px 24px -8px hsl(48 100% 48% / 0.3);
+    --shadow-primary-hover: 0 12px 32px -8px hsl(48 100% 48% / 0.5);
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 91%;
+    --sidebar-primary: 48 100% 48%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 0 0% 91%;
+    --sidebar-border: 0 0% 100% / 0.08;
+    --sidebar-ring: 48 100% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans tracking-wide;
+    background:
+      radial-gradient(ellipse 100% 80% at 30% 20%, hsl(0 0% 92% / 0.4) 0%, transparent 50%),
+      radial-gradient(ellipse 80% 60% at 70% 80%, hsl(0 0% 90% / 0.3) 0%, transparent 50%),
+      hsl(45, 6%, 97%);
+    letter-spacing: 0.02em;
+  }
+
+  html.dark body {
+    background:
+      radial-gradient(ellipse 120% 80% at 20% 10%, hsl(48 100% 48% / 0.02) 0%, transparent 45%),
+      radial-gradient(ellipse 80% 60% at 80% 90%, hsl(0 0% 14% / 0.4) 0%, transparent 50%),
+      hsl(0 0% 8.5%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Consistent border radius for all interactive elements — no pill shapes */
+  button:not([class*="rounded-full"]),
+  .badge:not([class*="rounded-full"]) {
+    border-radius: var(--radius-btn) !important;
+  }
+
+  input:not([type="radio"]):not([type="checkbox"]),
+  select,
+  textarea {
+    border-radius: var(--radius-input) !important;
+  }
+
+  .glass-card {
+    border-radius: var(--radius) !important;
+  }
+
+  .glass-card {
+    @apply border border-border;
+    background: hsl(0 0% 100% / 0.88);
+    backdrop-filter: blur(var(--glass-blur));
+    box-shadow: var(--shadow-card);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .glass-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-3px);
+  }
+
+  .dark .glass-card {
+    background: hsl(0 0% 14% / 0.88);
+    border: none;
+    backdrop-filter: blur(24px);
+  }
+
+  .stat-number {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+}
