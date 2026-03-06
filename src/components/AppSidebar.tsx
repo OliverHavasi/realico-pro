@@ -54,7 +54,7 @@ export function AppSidebar() {
     <Sidebar collapsible="none" className="border-none m-6 mr-0 w-[260px] shrink-0">
       {/* Logo — aligned with header search bar */}
       <div className="h-16 flex items-center px-6">
-        <img src={logoSrc} alt="Realico Aura" className="h-12 w-auto" />
+        <img src={logoSrc} alt="Realico Aura" className="h-14 w-auto" />
       </div>
 
       {/* Profile Section */}
