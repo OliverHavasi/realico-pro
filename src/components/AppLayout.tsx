@@ -13,13 +13,13 @@ export function AppLayout({ children }: AppLayoutProps) {
         <AppSidebar />
         <div className="flex-1 flex flex-col min-w-0">
           <header className="h-16 flex items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-10 sticky top-0 z-30">
-            <div className="flex items-center gap-3 flex-1 max-w-2xl">
-              <div className="hidden md:flex items-center gap-2 bg-secondary rounded-[var(--radius)] px-5 h-[var(--interactive-height)] flex-1 max-w-xl">
-                <Search className="h-4 w-4 text-muted-foreground shrink-0" />
+            <div className="flex items-center gap-3 flex-1 max-w-md">
+              <div className="hidden md:flex items-center gap-2 bg-secondary rounded-full px-4 h-9 flex-1">
+                <Search className="h-3.5 w-3.5 text-muted-foreground shrink-0" />
                 <input
                   type="text"
                   placeholder="Vyhľadávanie..."
-                  className="bg-transparent border-none outline-none text-sm font-medium placeholder:text-muted-foreground w-full"
+                  className="bg-transparent border-none outline-none text-xs font-medium placeholder:text-muted-foreground w-full"
                 />
               </div>
             </div>

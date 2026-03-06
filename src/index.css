@@ -12,11 +12,11 @@
     --font-sans: 'Outfit', 'Google Sans', system-ui, sans-serif;
     --font-display: 'Outfit', 'Google Sans', system-ui, sans-serif;
 
-    --radius: 12px;
-    --radius-sm: 8px;
-    --radius-md: 10px;
-    --radius-lg: 12px;
-    --radius-input: 12px;
+    --radius: 20px;
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
+    --radius-input: 20px;
     --radius-btn: 9999px;
     --spacing-uniform: 24px;
     --spacing-sm: 16px;
@@ -54,8 +54,8 @@
     --warning: 48 100% 48%;
     --warning-foreground: 0 0% 0%;
 
-    --border: 0 0% 0% / 0.10;
-    --input: 0 0% 0% / 0.12;
+    --border: 0 0% 0% / 0.06;
+    --input: 0 0% 0% / 0.08;
     --ring: 48 100% 48%;
 
     --chart-line: 48 100% 48%;
