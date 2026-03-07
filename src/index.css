@@ -168,7 +168,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-semibold tracking-wide;
+    @apply font-display font-medium tracking-wide;
   }
 }
 
@@ -198,5 +198,10 @@
     font-weight: 500;
     line-height: 1;
     letter-spacing: -0.02em;
+  }
+
+  /* Sidebar transition */
+  [data-sidebar="sidebar"] {
+    transition: width 0.3s ease-in-out;
   }
 }
