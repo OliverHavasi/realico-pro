@@ -78,9 +78,9 @@ const OrganizerPage = () => {
               </button>
             </div>
             <h2 className="text-xl font-semibold">Marec 2026</h2>
-            <div className="flex gap-[20px]">
+            <div className="flex gap-6">
               {["Mesiac", "Týždeň", "Rozvrh"].map((v, i) => (
-                <button key={v} className={`h-9 px-4 rounded-full text-sm font-medium transition-all ${i === 0 ? "bg-foreground text-background" : "bg-secondary text-muted-foreground hover:bg-secondary/80"}`}>
+                <button key={v} className={`h-9 px-4 rounded-full text-sm font-normal tracking-wide transition-all ${i === 0 ? "bg-foreground text-background" : "bg-secondary text-muted-foreground hover:bg-secondary/80"}`}>
                   {v}
                 </button>
               ))}
