@@ -199,4 +199,9 @@
     line-height: 1;
     letter-spacing: -0.02em;
   }
+
+  /* Sidebar transition */
+  [data-sidebar="sidebar"] {
+    transition: width 0.3s ease-in-out;
+  }
 }
