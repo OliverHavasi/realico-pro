@@ -42,9 +42,9 @@ const DemandsPage = () => {
 
               {/* Body */}
               <div className="p-5 flex flex-col md:flex-row gap-6">
-                <div className="md:w-48 flex items-center justify-center">
-                  <div className="h-20 w-20 rounded-2xl bg-muted flex items-center justify-center">
-                    <span className="text-2xl font-medium text-muted-foreground/30">{demand.initials}</span>
+                <div className="flex items-start">
+                  <div className="h-16 w-16 rounded-full bg-[hsl(var(--icon-bg))] ring-1 ring-border flex items-center justify-center shrink-0">
+                    <span className="text-lg font-medium text-muted-foreground">{demand.initials}</span>
                   </div>
                 </div>
                 <div className="flex-1 flex flex-col md:flex-row justify-between gap-4">

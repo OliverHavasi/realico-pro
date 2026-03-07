@@ -47,7 +47,7 @@ const OrganizerPage = () => {
               </div>
             ))}
           </div>
-          <button className="mt-4 h-[var(--interactive-height)] px-8 rounded-full bg-foreground text-background text-[0.85rem] font-medium shadow-sm hover:opacity-90 active:scale-[0.98] transition-all">
+          <button className="mt-4 h-[var(--interactive-height)] px-8 rounded-full bg-primary text-primary-foreground text-[0.85rem] font-semibold shadow-primary hover:shadow-primary-hover hover:-translate-y-0.5 active:scale-[0.98] transition-all">
             Uložiť
           </button>
         </div>
@@ -59,7 +59,7 @@ const OrganizerPage = () => {
               <Search className="h-4 w-4 text-muted-foreground" />
               <input type="text" placeholder="Vyhľadávanie..." className="bg-transparent border-none outline-none text-[0.875rem] placeholder:text-muted-foreground w-full" />
             </div>
-            <button className="h-[var(--interactive-height)] px-5 rounded-full bg-foreground text-background text-sm font-medium flex items-center gap-2 hover:opacity-90 transition-all">
+            <button className="h-[var(--interactive-height)] px-5 rounded-full bg-primary text-primary-foreground text-sm font-semibold shadow-primary hover:shadow-primary-hover hover:-translate-y-0.5 active:scale-[0.98] flex items-center gap-2 transition-all">
               <Plus className="h-4 w-4" /> Nová udalosť
             </button>
           </div>

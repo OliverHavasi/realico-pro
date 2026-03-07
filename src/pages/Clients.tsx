@@ -51,7 +51,7 @@ const ClientsPage = () => {
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="border-b border-slate-100/50">
+                <tr className="border-b border-slate-200/60">
                    <th className="text-left px-5 py-4 text-xs font-medium text-muted-foreground uppercase tracking-wider">Vložil</th>
                    <th className="text-left px-5 py-4 text-xs font-medium text-muted-foreground uppercase tracking-wider">Meno klienta</th>
                    <th className="text-left px-5 py-4 text-xs font-medium text-muted-foreground uppercase tracking-wider">Kontakt</th>
@@ -63,7 +63,7 @@ const ClientsPage = () => {
               </thead>
               <tbody>
                 {clients.map((client) => (
-                  <tr key={client.name} className="border-b border-slate-100/50 last:border-0 hover:bg-secondary/40 transition-colors">
+                  <tr key={client.name} className="border-b border-slate-200/60 last:border-0 hover:bg-secondary/40 transition-colors">
                     <td className="px-5 py-4">
                       <p className="text-xs text-muted-foreground">{client.date}</p>
                       <p className="text-xs text-muted-foreground">{client.agent}</p>
