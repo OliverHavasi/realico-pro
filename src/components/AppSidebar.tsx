@@ -30,7 +30,7 @@ import {
   SidebarFooter,
   useSidebar,
 } from "@/components/ui/sidebar";
-import logoSrc from "@/assets/logo_r.png";
+import logoSrc from "@/assets/realico_pro_logo.png";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const mainItems = [
@@ -59,24 +59,30 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon" className="border-none">
       {/* Logo */}
-      <div className={`h-16 flex items-center ${collapsed ? "justify-center px-0" : "px-6"} transition-all duration-300`}>
-        <img src={logoSrc} alt="Realico" className={`${collapsed ? "h-8 w-8" : "h-10 w-auto"} object-contain transition-all duration-300`} />
+      <div className={`h-14 flex items-center ${collapsed ? "justify-center px-2" : "px-5"} transition-all duration-300`}>
+        <img
+          src={logoSrc}
+          alt="Realico PRO"
+          className={`${collapsed ? "h-7 w-7 object-cover object-left" : "h-8 w-auto"} object-contain transition-all duration-300`}
+        />
       </div>
 
       {/* Profile Section */}
       <div className={`flex flex-col items-center py-4 ${collapsed ? "px-1" : "px-6"} transition-all duration-300`}>
-        <Avatar className={`${collapsed ? "w-10 h-10" : "w-14 h-14"} border-2 border-background shadow-[0_0_20px_hsl(48_100%_50%/0.3)] transition-all duration-300`}>
-          <AvatarFallback className="bg-primary/10 text-primary font-medium text-base">{collapsed ? "L" : "LP"}</AvatarFallback>
+        <Avatar className={`${collapsed ? "w-9 h-9" : "w-14 h-14"} border-2 border-primary/20 transition-all duration-300`}>
+          <AvatarFallback className="bg-white text-primary font-semibold text-base">
+            {collapsed ? "L" : "LP"}
+          </AvatarFallback>
         </Avatar>
         {!collapsed && (
           <>
-            <span className="text-sm font-medium mt-2.5 text-foreground">Lucia Pastorová</span>
-            <span className="text-xs font-medium text-muted-foreground">Maklér</span>
+            <span className="text-sm font-medium mt-2.5 text-foreground tracking-wide">Lucia Pastorová</span>
+            <span className="text-xs font-normal text-muted-foreground tracking-wide">Maklér</span>
           </>
         )}
       </div>
 
-      <SidebarContent className={`${collapsed ? "px-1" : "px-3"} py-2`}>
+      <SidebarContent className={`${collapsed ? "px-1" : "px-3"} py-1`}>
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu className="space-y-0.5">
@@ -88,17 +94,17 @@ export function AppSidebar() {
                       <NavLink
                         to={item.url}
                         end={item.url === "/"}
-                        className={`flex items-center gap-3 h-[var(--interactive-height)] ${collapsed ? "justify-center px-0" : "px-4"} rounded-full text-[13px] tracking-wide transition-colors ${
+                        className={`flex items-center gap-3 h-[38px] ${collapsed ? "justify-center px-0" : "px-4"} rounded-full text-[13px] tracking-wide transition-colors ${
                           isActive
-                            ? "text-primary font-medium"
+                            ? "bg-secondary text-foreground font-medium"
                             : "text-sidebar-foreground font-normal hover:text-foreground hover:bg-sidebar-accent"
                         }`}
                         activeClassName=""
                       >
                         <item.icon
                           className="h-[18px] w-[18px] shrink-0"
-                          strokeWidth={isActive ? 2 : 1.5}
-                          color={isActive ? "hsl(var(--primary))" : undefined}
+                          strokeWidth={isActive ? 2.2 : 1.8}
+                          fill={isActive ? "currentColor" : "none"}
                         />
                         {!collapsed && <span>{item.title}</span>}
                       </NavLink>

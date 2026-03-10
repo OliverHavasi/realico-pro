@@ -10,13 +10,39 @@ import {
   Star,
   Plus,
   Home,
+  Heart,
+  MessageSquare,
 } from "lucide-react";
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
 const stats = [
-  { label: "Plánované obhliadky", value: "12", icon: Eye, trend: "+3 tento týždeň" },
-  { label: "Plánované ponuky", value: "8", icon: FileText, trend: "+2 nové" },
-  { label: "Exkluzívne zmluvy", value: "5", icon: Handshake, trend: "3 aktívne" },
-  { label: "Plánované body", value: "34", icon: TrendingUp, trend: "cieľ: 50" },
+  { label: "Exkluzívne zmluvy", value: "12", icon: MessageSquare, trend: "+3 tento týždeň" },
+  { label: "Plánované body", value: "8", icon: Home, trend: "+2 nové" },
+  { label: "Exkluzívne zmluvy", value: "5", icon: MessageSquare, trend: "3 aktívne" },
+  { label: "Plánované body", value: "34", icon: Heart, trend: "cieľ: 50" },
+];
+
+const chartData = [
+  { name: "Jan", views: 1200 },
+  { name: "Feb", views: 2100 },
+  { name: "Mar", views: 1800 },
+  { name: "Apr", views: 3200 },
+  { name: "Máj", views: 2800 },
+  { name: "Jún", views: 4100 },
+  { name: "Júl", views: 3600 },
+  { name: "Aug", views: 4800 },
+  { name: "Sep", views: 3900 },
+  { name: "Okt", views: 5200 },
+  { name: "Nov", views: 4400 },
+  { name: "Dec", views: 5800 },
 ];
 
 const tasks = [
@@ -41,6 +67,11 @@ const announcements = [
   },
 ];
 
+const formatYAxis = (value: number) => {
+  if (value >= 1000) return `${(value / 1000).toFixed(0)}k`;
+  return value.toString();
+};
+
 const Index = () => {
   return (
     <AppLayout>
@@ -53,8 +84,8 @@ const Index = () => {
 
         {/* Stat Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
-          {stats.map((stat) => (
-            <div key={stat.label} className="glass-card p-6 flex flex-col gap-3">
+          {stats.map((stat, i) => (
+            <div key={`${stat.label}-${i}`} className="glass-card p-6 flex flex-col gap-3">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-normal text-muted-foreground tracking-wide">{stat.label}</span>
                 <div className="h-10 w-10 rounded-full bg-[hsl(var(--icon-bg))] flex items-center justify-center">
@@ -65,6 +96,59 @@ const Index = () => {
               <span className="text-xs font-normal text-muted-foreground tracking-wide">{stat.trend}</span>
             </div>
           ))}
+        </div>
+
+        {/* Chart Row */}
+        <div className="grid grid-cols-1 lg:grid-cols-10 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
+          {/* Statistics Chart - 70% */}
+          <div className="glass-card p-6 lg:col-span-7">
+            <div className="mb-4">
+              <h2 className="text-lg font-medium tracking-wide">Štatistika zobrazení</h2>
+              <p className="text-sm text-muted-foreground font-normal tracking-wide">Prehľad výkonu vašich nehnuteľností</p>
+            </div>
+            <div className="h-[280px]">
+              <ResponsiveContainer width="100%" height="100%">
+                <AreaChart data={chartData} margin={{ top: 5, right: 10, left: -10, bottom: 0 }}>
+                  <defs>
+                    <linearGradient id="colorViews" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#F3C300" stopOpacity={0.3} />
+                      <stop offset="95%" stopColor="#F3C300" stopOpacity={0} />
+                    </linearGradient>
+                  </defs>
+                  <CartesianGrid strokeDasharray="3 3" stroke="hsl(0 0% 0% / 0.05)" />
+                  <XAxis dataKey="name" tick={{ fontSize: 12, fill: "hsl(0 0% 45%)" }} axisLine={false} tickLine={false} />
+                  <YAxis tickFormatter={formatYAxis} tick={{ fontSize: 12, fill: "hsl(0 0% 45%)" }} axisLine={false} tickLine={false} />
+                  <Tooltip
+                    contentStyle={{
+                      borderRadius: "12px",
+                      border: "1px solid hsl(0 0% 0% / 0.06)",
+                      boxShadow: "0 8px 24px -6px hsl(0 0% 0% / 0.1)",
+                      fontSize: "13px",
+                    }}
+                  />
+                  <Area
+                    type="monotone"
+                    dataKey="views"
+                    stroke="#F3C300"
+                    strokeWidth={2}
+                    fillOpacity={1}
+                    fill="url(#colorViews)"
+                  />
+                </AreaChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+
+          {/* Single Listing Card - 30% */}
+          <div className="glass-card p-5 lg:col-span-3 flex flex-col">
+            <div className="h-44 bg-muted rounded-[12px] mb-4 flex items-center justify-center">
+              <Home className="h-10 w-10 text-muted-foreground/30" strokeWidth={1.5} />
+            </div>
+            <p className="text-xs font-normal text-muted-foreground tracking-wide">27.02.2026 · Monika Delejová</p>
+            <h3 className="text-sm font-medium mt-1 text-foreground tracking-wide">3 izbový byt s parkovaním</h3>
+            <p className="text-xs text-muted-foreground tracking-wide">Hurbanovo</p>
+            <p className="text-muted-foreground font-medium mt-auto pt-3 text-sm tracking-wide">Počet bodov: 18b</p>
+          </div>
         </div>
 
         {/* Main Grid */}
@@ -107,7 +191,7 @@ const Index = () => {
             <div className="space-y-4">
               {references.map((ref) => (
                 <div key={ref.name} className="flex gap-3 py-3 border-b border-border last:border-0">
-                  <div className="h-10 w-10 rounded-full bg-[hsl(var(--icon-bg))] ring-1 ring-primary/40 flex items-center justify-center shrink-0">
+                  <div className="h-10 w-10 rounded-full bg-white ring-1 ring-border flex items-center justify-center shrink-0">
                     <span className="text-sm font-semibold text-primary">{ref.initials}</span>
                   </div>
                   <div className="min-w-0">
