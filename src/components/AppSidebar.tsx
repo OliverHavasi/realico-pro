@@ -69,8 +69,8 @@ export function AppSidebar() {
 
       {/* Profile Section */}
       <div className={`flex flex-col items-center py-4 ${collapsed ? "px-1" : "px-6"} transition-all duration-300`}>
-        <Avatar className={`${collapsed ? "w-9 h-9" : "w-14 h-14"} ring-2 ring-primary/20 transition-all duration-300`}>
-          <AvatarFallback className="bg-[#fef7e4] text-[#ceb817] font-semibold text-base">
+        <Avatar className={`${collapsed ? "w-9 h-9" : "w-14 h-14"} ring-1 ring-border transition-all duration-300`}>
+          <AvatarFallback className="bg-background text-muted-foreground font-semibold text-base">
             {collapsed ? "L" : "LP"}
           </AvatarFallback>
         </Avatar>

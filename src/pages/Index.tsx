@@ -88,8 +88,8 @@ const Index = () => {
             <div key={`${stat.label}-${i}`} className="glass-card p-6 flex flex-col gap-3">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-normal text-muted-foreground tracking-wide">{stat.label}</span>
-                <div className="h-11 w-11 rounded-full bg-[#fef7e4] flex items-center justify-center">
-                  <stat.icon className="h-5 w-5 text-[#ceb817]" strokeWidth={1.8} fill="#ceb817" />
+                <div className="h-12 w-12 rounded-full bg-[hsl(48_35%_94%)] dark:bg-[hsl(0_0%_20%)] flex items-center justify-center">
+                  <stat.icon className="h-6 w-6 text-[hsl(48_100%_48%)] dark:text-[hsl(48_100%_41%)]" strokeWidth={1.5} />
                 </div>
               </div>
               <span className="stat-number text-foreground">{stat.value}</span>
@@ -191,8 +191,8 @@ const Index = () => {
             <div className="space-y-4">
               {references.map((ref) => (
                 <div key={ref.name} className="flex gap-3 py-3 border-b border-border last:border-0">
-                  <div className="h-10 w-10 rounded-full bg-[#fef7e4] ring-1 ring-border flex items-center justify-center shrink-0">
-                    <span className="text-sm font-semibold text-[#ceb817]">{ref.initials}</span>
+                  <div className="h-10 w-10 rounded-full bg-background ring-1 ring-border flex items-center justify-center shrink-0">
+                    <span className="text-sm font-semibold text-muted-foreground">{ref.initials}</span>
                   </div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">

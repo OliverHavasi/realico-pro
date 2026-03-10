@@ -39,10 +39,10 @@ export function AppLayout({ children }: AppLayoutProps) {
               </div>
               <div className="flex items-center gap-1 ml-2">
                 <button className="p-2 rounded-full hover:bg-secondary transition-colors">
-                  <Search className="h-[18px] w-[18px] text-muted-foreground" strokeWidth={1.8} />
+                  <Search className="h-[18px] w-[18px] text-foreground" strokeWidth={1.8} />
                 </button>
                 <button className="relative p-2 rounded-full hover:bg-secondary transition-colors">
-                  <Bell className="h-[18px] w-[18px] text-muted-foreground" strokeWidth={1.8} />
+                  <Bell className="h-[18px] w-[18px] text-foreground" strokeWidth={1.8} />
                   <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-primary border-[1.5px] border-background" />
                 </button>
               </div>
