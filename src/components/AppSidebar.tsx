@@ -85,7 +85,7 @@ export function AppSidebar() {
       <SidebarContent className={`${collapsed ? "px-1" : "px-3"} py-1`}>
         <SidebarGroup>
           <SidebarGroupContent>
-            <SidebarMenu className="space-y-0">
+            <SidebarMenu className="space-y-0.5">
               {mainItems.map((item) => {
                 const isActive = location.pathname === item.url;
                 return (
