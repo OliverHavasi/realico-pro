@@ -63,14 +63,14 @@ export function AppSidebar() {
         <img
           src={logoSrc}
           alt="Realico PRO"
-          className={`${collapsed ? "h-7 w-7 object-cover object-left" : "h-8 w-auto"} object-contain transition-all duration-300`}
+          className={`${collapsed ? "h-6 w-6 object-cover object-left" : "h-6 w-auto"} object-contain transition-all duration-300`}
         />
       </div>
 
       {/* Profile Section */}
       <div className={`flex flex-col items-center py-4 ${collapsed ? "px-1" : "px-6"} transition-all duration-300`}>
-        <Avatar className={`${collapsed ? "w-9 h-9" : "w-14 h-14"} border-2 border-primary/20 transition-all duration-300`}>
-          <AvatarFallback className="bg-white text-primary font-semibold text-base">
+        <Avatar className={`${collapsed ? "w-9 h-9" : "w-14 h-14"} ring-2 ring-primary/20 transition-all duration-300`}>
+          <AvatarFallback className="bg-[#fef7e4] text-[#ceb817] font-semibold text-base">
             {collapsed ? "L" : "LP"}
           </AvatarFallback>
         </Avatar>
@@ -103,8 +103,8 @@ export function AppSidebar() {
                       >
                         <item.icon
                           className="h-[18px] w-[18px] shrink-0"
-                          strokeWidth={isActive ? 2.2 : 1.8}
-                          fill={isActive ? "currentColor" : "none"}
+                          strokeWidth={2}
+                          fill="currentColor"
                         />
                         {!collapsed && <span>{item.title}</span>}
                       </NavLink>
