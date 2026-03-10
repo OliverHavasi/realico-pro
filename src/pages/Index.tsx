@@ -191,8 +191,8 @@ const Index = () => {
             <div className="space-y-4">
               {references.map((ref) => (
                 <div key={ref.name} className="flex gap-3 py-3 border-b border-border last:border-0">
-                  <div className="h-10 w-10 rounded-full bg-[#fef7e4] ring-1 ring-border flex items-center justify-center shrink-0">
-                    <span className="text-sm font-semibold text-[#ceb817]">{ref.initials}</span>
+                  <div className="h-10 w-10 rounded-full bg-background ring-1 ring-border flex items-center justify-center shrink-0">
+                    <span className="text-sm font-semibold text-muted-foreground">{ref.initials}</span>
                   </div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
