@@ -7,13 +7,14 @@ interface AppLayoutProps {
 }
 
 const shortcuts = [
-  "Kontakty",
-  "Môj e-mail",
-  "AI",
-  "Predané nehnuteľnosti",
-  "AML",
-  "E-Podpis",
-  "Moje Výsledky",
+  "E PODPIS",
+  "ORGANIZER",
+  "ORGANIZER ORKA",
+  "· ORKA",
+  "E PODPIS",
+  "ORGANIZER",
+  "ORGANIZER ORKA",
+  "· ORKA",
 ];
 
 export function AppLayout({ children }: AppLayoutProps) {
@@ -22,34 +23,33 @@ export function AppLayout({ children }: AppLayoutProps) {
       <div className="min-h-screen flex w-full">
         <AppSidebar />
         <div className="flex-1 flex flex-col min-w-0">
-          <header className="h-14 flex items-center justify-between px-4 sm:px-6 lg:px-8 xl:px-10 sticky top-0 z-30 bg-background/80 backdrop-blur-sm">
-            {/* Shortcuts */}
-            <div className="flex items-center gap-2 flex-1 overflow-x-auto">
+          <header className="h-14 flex items-center justify-end px-4 sm:px-6 lg:px-8 xl:px-10 sticky top-0 z-30 bg-background/80 backdrop-blur-sm">
+            {/* Right group: Shortcuts + Search + Bell */}
+            <div className="flex items-center gap-3">
               <span className="text-xs font-medium text-muted-foreground whitespace-nowrap tracking-wide">Moje skratky:</span>
-              <div className="flex items-center gap-2">
-                {shortcuts.map((label) => (
+              <div className="flex items-center gap-2 overflow-x-auto">
+                {shortcuts.map((label, i) => (
                   <button
-                    key={label}
-                    className="h-7 px-3.5 rounded-full bg-secondary text-xs font-medium text-secondary-foreground whitespace-nowrap hover:bg-secondary/80 transition-colors tracking-wide"
+                    key={`${label}-${i}`}
+                    className="h-7 px-3.5 rounded-full bg-secondary text-[11px] font-medium text-secondary-foreground whitespace-nowrap hover:bg-secondary/80 transition-colors tracking-wider uppercase"
                   >
                     {label}
                   </button>
                 ))}
               </div>
-            </div>
-            {/* Search icon + Bell */}
-            <div className="flex items-center gap-1.5 ml-4">
-              <button className="p-2.5 rounded-full hover:bg-secondary transition-colors">
-                <Search className="h-5 w-5 text-muted-foreground" strokeWidth={1.5} />
-              </button>
-              <button className="relative p-2.5 rounded-full hover:bg-secondary transition-colors">
-                <Bell className="h-5 w-5 text-muted-foreground" strokeWidth={1.5} />
-                <span className="absolute top-1 right-1 h-2.5 w-2.5 rounded-full bg-primary border-2 border-background" />
-              </button>
+              <div className="flex items-center gap-1 ml-2">
+                <button className="p-2 rounded-full hover:bg-secondary transition-colors">
+                  <Search className="h-[18px] w-[18px] text-muted-foreground" strokeWidth={1.8} />
+                </button>
+                <button className="relative p-2 rounded-full hover:bg-secondary transition-colors">
+                  <Bell className="h-[18px] w-[18px] text-muted-foreground" strokeWidth={1.8} />
+                  <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-primary border-[1.5px] border-background" />
+                </button>
+              </div>
             </div>
           </header>
           <main className="flex-1 px-4 sm:px-6 lg:px-8 xl:px-10 py-6 w-full">
-            <div className="w-full max-w-[1800px] mx-auto">
+            <div className="w-full">
               {children}
             </div>
           </main>
