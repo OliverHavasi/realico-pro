@@ -198,8 +198,20 @@
     letter-spacing: -0.02em;
   }
 
-  /* Sidebar transition */
+  /* Sidebar floating card */
   [data-sidebar="sidebar"] {
     transition: width 0.3s ease-in-out;
+  }
+
+  [data-sidebar="sidebar"] > div {
+    background: hsl(0 0% 100%) !important;
+    border-radius: var(--radius) !important;
+    box-shadow: var(--shadow-card) !important;
+    margin: 12px 0 12px 12px;
+    height: calc(100vh - 24px) !important;
+  }
+
+  .dark [data-sidebar="sidebar"] > div {
+    background: hsl(0 0% 14%) !important;
   }
 }
