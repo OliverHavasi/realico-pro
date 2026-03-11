@@ -12,6 +12,10 @@ import {
   Home,
   Heart,
   MessageSquare,
+  Megaphone,
+  BadgeDollarSign,
+  BadgePercent,
+  Gift,
 } from "lucide-react";
 import {
   AreaChart,
