@@ -240,6 +240,23 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Tips Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
+          {[
+            { icon: Megaphone, label: "Tip na predaj" },
+            { icon: BadgeDollarSign, label: "Tip na predaj" },
+            { icon: BadgePercent, label: "Tip na predaj" },
+            { icon: Gift, label: "Tip na predaj" },
+          ].map((tip, i) => (
+            <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4">
+              <div className="h-20 w-20 rounded-full bg-[#fdf7e6] flex items-center justify-center">
+                <tip.icon className="h-10 w-10 text-foreground" strokeWidth={1.5} />
+              </div>
+              <span className="text-sm font-medium tracking-wide">{tip.label}</span>
+            </div>
+          ))}
+        </div>
+
         {/* Recent Properties */}
         <div className="glass-card p-6">
           <div className="flex items-center justify-between mb-5">
@@ -248,13 +265,14 @@ const Index = () => {
                 Prejsť na predaje <ArrowRight className="h-3.5 w-3.5" />
               </button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
             {[
               { title: "3 izbový byt s parkovaním", location: "Hurbanovo", price: "18b", date: "27.02.2026", agent: "Monika Delejová" },
               { title: "1 izbový byt, Pod papierňou", location: "Prešov", price: "11b", date: "25.02.2026", agent: "Monika Delejová" },
               { title: "Luxusne zrekonštruovaný byt", location: "Košice", price: "11b", date: "24.02.2026", agent: "Mária Arvaiová" },
+              { title: "2 izbový byt v centre", location: "Bratislava", price: "15b", date: "23.02.2026", agent: "Lucia Pastorová" },
             ].map((property) => (
-              <div key={property.title} className="bg-secondary rounded-[10px] p-4 hover:bg-secondary/80 transition-colors">
+              <div key={property.title} className="bg-secondary rounded-[var(--radius)] p-4 hover:bg-secondary/80 transition-colors">
                 <div className="h-40 bg-muted rounded-[8px] mb-3 flex items-center justify-center">
                   <Home className="h-8 w-8 text-muted-foreground/30" strokeWidth={1.5} />
                 </div>
