@@ -264,27 +264,6 @@ const Index = () => {
           ))}
         </div>
 
-        {/* Bottom Service Cards - 2x4 Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
-          {[
-            { icon: icoBuy, label: "Výkup nehnuteľnosti" },
-            { icon: icoLupa, label: "Realitný tip" },
-            { icon: icoSanon, label: "Právny servis" },
-            { icon: icoAkcia, label: "Financovanie" },
-            { icon: icoObhliadka, label: "Inzercia" },
-            { icon: icoChat, label: "Odhad ceny" },
-            { icon: icoOdovzdavanie, label: "Podpis dokumentov" },
-            { icon: icoBuy, label: "Marketing" },
-          ].map((service, i) => (
-            <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4">
-              <div className="h-20 w-20 rounded-full bg-[#f7f7f7] flex items-center justify-center">
-                <img src={service.icon} alt={service.label} className="h-10 w-10 invert" />
-              </div>
-              <span className="text-base font-semibold tracking-wide">{service.label}</span>
-            </div>
-          ))}
-        </div>
-
         {/* Recent Properties */}
         <div className="glass-card p-6">
           <div className="flex items-center justify-between mb-5">
@@ -311,6 +290,27 @@ const Index = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Bottom Service Cards - 2x4 Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
+          {[
+            { icon: icoBuy, label: "Výkup nehnuteľnosti" },
+            { icon: icoLupa, label: "Realitný tip" },
+            { icon: icoSanon, label: "Právny servis" },
+            { icon: icoAkcia, label: "Financovanie" },
+            { icon: icoObhliadka, label: "Inzercia" },
+            { icon: icoChat, label: "Odhad ceny" },
+            { icon: icoOdovzdavanie, label: "Podpis dokumentov" },
+            { icon: icoBuy, label: "Marketing" },
+          ].map((service, i) => (
+            <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4">
+              <div className="h-20 w-20 rounded-full bg-[#f7f7f7] flex items-center justify-center">
+                <img src={service.icon} alt={service.label} className="h-10 w-10" />
+              </div>
+              <span className="text-base font-semibold tracking-wide">{service.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </AppLayout>
