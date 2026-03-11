@@ -63,14 +63,14 @@ export function AppSidebar() {
         <img
           src={logoSrc}
           alt="Realico PRO"
-          className={`${collapsed ? "h-6 w-6 object-cover object-left" : "h-6 w-auto"} object-contain transition-all duration-300`}
+          className={`${collapsed ? "h-5 w-5 object-cover object-left" : "h-[24px] w-auto"} object-contain transition-all duration-300`}
         />
       </div>
 
       {/* Profile Section */}
       <div className={`flex flex-col items-center py-4 ${collapsed ? "px-1" : "px-6"} transition-all duration-300`}>
-        <Avatar className={`${collapsed ? "w-9 h-9" : "w-14 h-14"} ring-1 ring-border transition-all duration-300`}>
-          <AvatarFallback className="bg-background text-muted-foreground font-semibold text-base">
+        <Avatar className={`${collapsed ? "w-9 h-9" : "w-14 h-14"} ring-[1.5px] ring-primary transition-all duration-300`} style={{ filter: 'drop-shadow(0 0 12px rgba(243, 195, 0, 0.4))' }}>
+          <AvatarFallback className="bg-white text-primary font-semibold text-base">
             {collapsed ? "L" : "LP"}
           </AvatarFallback>
         </Avatar>
