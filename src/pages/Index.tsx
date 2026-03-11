@@ -278,7 +278,7 @@ const Index = () => {
           ].map((service, i) => (
             <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4">
               <div className="h-20 w-20 rounded-full bg-[#f7f7f7] flex items-center justify-center">
-                <img src={service.icon} alt={service.label} className="h-10 w-10 invert" />
+                <img src={service.icon} alt={service.label} className="h-10 w-10" />
               </div>
               <span className="text-base font-semibold tracking-wide">{service.label}</span>
             </div>
