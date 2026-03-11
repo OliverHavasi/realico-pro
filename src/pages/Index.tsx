@@ -1,9 +1,5 @@
 import { AppLayout } from "@/components/AppLayout";
 import {
-  Eye,
-  FileText,
-  Handshake,
-  TrendingUp,
   CheckCircle2,
   Clock,
   ArrowRight,
@@ -12,11 +8,14 @@ import {
   Home,
   Heart,
   MessageSquare,
-  Megaphone,
-  BadgeDollarSign,
-  BadgePercent,
-  Gift,
 } from "lucide-react";
+import icoBuy from "@/assets/ico_buy_crm.svg";
+import icoLupa from "@/assets/ico_lupa_crm.svg";
+import icoSanon from "@/assets/ico_sanon_crm.svg";
+import icoAkcia from "@/assets/ico_akcia_crm.svg";
+import icoObhliadka from "@/assets/ico_obhliadka_crm.svg";
+import icoChat from "@/assets/ico_chat_crm.svg";
+import icoOdovzdavanie from "@/assets/ico_odovzdavanie_crm.svg";
 import {
   AreaChart,
   Area,
@@ -240,23 +239,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Tips Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
-          {[
-            { icon: Megaphone, label: "Tip na predaj" },
-            { icon: BadgeDollarSign, label: "Tip na predaj" },
-            { icon: BadgePercent, label: "Tip na predaj" },
-            { icon: Gift, label: "Tip na predaj" },
-          ].map((tip, i) => (
-            <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4">
-              <div className="h-20 w-20 rounded-full bg-[#fdf7e6] flex items-center justify-center">
-                <tip.icon className="h-10 w-10 text-foreground" strokeWidth={1.5} />
-              </div>
-              <span className="text-sm font-medium tracking-wide">{tip.label}</span>
-            </div>
-          ))}
-        </div>
-
         {/* Recent Properties */}
         <div className="glass-card p-6">
           <div className="flex items-center justify-between mb-5">
@@ -283,6 +265,26 @@ const Index = () => {
               </div>
             ))}
           </div>
+        </div>
+        {/* Service Cards - 2 rows x 4 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
+          {[
+            { icon: icoBuy, label: "Výkup nehnuteľností" },
+            { icon: icoLupa, label: "Realitný tip" },
+            { icon: icoSanon, label: "Právny servis" },
+            { icon: icoAkcia, label: "Financovanie" },
+            { icon: icoObhliadka, label: "Inzercia" },
+            { icon: icoChat, label: "Odhad ceny" },
+            { icon: icoOdovzdavanie, label: "Podpis dokumentov" },
+            { icon: icoBuy, label: "Marketing" },
+          ].map((service, i) => (
+            <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4 min-h-[140px]">
+              <div className="h-16 w-16 rounded-full bg-[hsl(0_0%_97%)] flex items-center justify-center">
+                <img src={service.icon} alt={service.label} className="h-8 w-8" style={{ filter: "brightness(0) saturate(100%) opacity(0.55)" }} />
+              </div>
+              <span className="text-sm font-medium tracking-wide">{service.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </AppLayout>
