@@ -1,9 +1,5 @@
 import { AppLayout } from "@/components/AppLayout";
 import {
-  Eye,
-  FileText,
-  Handshake,
-  TrendingUp,
   CheckCircle2,
   Clock,
   ArrowRight,
@@ -12,11 +8,14 @@ import {
   Home,
   Heart,
   MessageSquare,
-  Megaphone,
-  BadgeDollarSign,
-  BadgePercent,
-  Gift,
 } from "lucide-react";
+import icoBuy from "@/assets/ico_buy_crm.svg";
+import icoLupa from "@/assets/ico_lupa_crm.svg";
+import icoSanon from "@/assets/ico_sanon_crm.svg";
+import icoAkcia from "@/assets/ico_akcia_crm.svg";
+import icoObhliadka from "@/assets/ico_obhliadka_crm.svg";
+import icoChat from "@/assets/ico_chat_crm.svg";
+import icoOdovzdavanie from "@/assets/ico_odovzdavanie_crm.svg";
 import {
   AreaChart,
   Area,
