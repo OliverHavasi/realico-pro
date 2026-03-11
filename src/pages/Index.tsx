@@ -266,6 +266,26 @@ const Index = () => {
             ))}
           </div>
         </div>
+        {/* Service Cards - 2 rows x 4 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
+          {[
+            { icon: icoBuy, label: "Výkup nehnuteľností" },
+            { icon: icoLupa, label: "Realitný tip" },
+            { icon: icoSanon, label: "Právny servis" },
+            { icon: icoAkcia, label: "Financovanie" },
+            { icon: icoObhliadka, label: "Inzercia" },
+            { icon: icoChat, label: "Odhad ceny" },
+            { icon: icoOdovzdavanie, label: "Podpis dokumentov" },
+            { icon: icoBuy, label: "Marketing" },
+          ].map((service, i) => (
+            <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4 min-h-[140px]">
+              <div className="h-16 w-16 rounded-full bg-[hsl(0_0%_97%)] flex items-center justify-center">
+                <img src={service.icon} alt={service.label} className="h-8 w-8" style={{ filter: "brightness(0) saturate(100%) opacity(0.55)" }} />
+              </div>
+              <span className="text-sm font-medium tracking-wide">{service.label}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </AppLayout>
   );
