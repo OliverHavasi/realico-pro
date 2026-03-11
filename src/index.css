@@ -135,7 +135,7 @@
     --shadow-primary: 0 8px 24px -8px hsl(48 100% 48% / 0.3);
     --shadow-primary-hover: 0 12px 32px -8px hsl(48 100% 48% / 0.5);
 
-    --sidebar-background: transparent;
+    --sidebar-background: 0 0% 14%;
     --sidebar-foreground: 0 0% 70%;
     --sidebar-primary: 48 100% 41%;
     --sidebar-primary-foreground: 0 0% 0%;
