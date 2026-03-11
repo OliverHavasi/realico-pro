@@ -280,7 +280,7 @@ const Index = () => {
           ].map((service, i) => (
             <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4 min-h-[140px]">
               <div className="h-16 w-16 rounded-full bg-[hsl(0_0%_97%)] flex items-center justify-center">
-                <img src={service.icon} alt={service.label} className="h-8 w-8" style={{ filter: "brightness(0) saturate(100%) opacity(0.55)" }} />
+                <img src={service.icon} alt={service.label} className="h-8 w-8" />
               </div>
               <span className="text-sm font-medium tracking-wide">{service.label}</span>
             </div>
