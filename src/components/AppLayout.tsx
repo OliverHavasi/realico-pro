@@ -7,14 +7,13 @@ interface AppLayoutProps {
 }
 
 const shortcuts = [
-  "E PODPIS",
-  "ORGANIZER",
-  "ORGANIZER ORKA",
-  "· ORKA",
-  "E PODPIS",
-  "ORGANIZER",
-  "ORGANIZER ORKA",
-  "· ORKA",
+  "Kontakty",
+  "Môj e-mail",
+  "AI",
+  "Predané nehnuteľnosti",
+  "AML",
+  "E-Podpis",
+  "Moje Výsledky",
 ];
 
 export function AppLayout({ children }: AppLayoutProps) {
