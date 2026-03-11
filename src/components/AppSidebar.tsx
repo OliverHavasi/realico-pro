@@ -69,8 +69,8 @@ export function AppSidebar() {
 
       {/* Profile Section */}
       <div className={`flex flex-col items-center py-4 ${collapsed ? "px-1" : "px-6"} transition-all duration-300`}>
-        <Avatar className={`${collapsed ? "w-9 h-9" : "w-14 h-14"} transition-all duration-300`} style={{ filter: 'drop-shadow(0 0 12px rgba(243, 195, 0, 0.4))' }}>
-          <AvatarFallback className="bg-background text-foreground font-semibold text-base">
+        <Avatar className={`${collapsed ? "w-9 h-9" : "w-14 h-14"} ring-[1.5px] ring-primary transition-all duration-300`} style={{ filter: 'drop-shadow(0 0 12px rgba(243, 195, 0, 0.4))' }}>
+          <AvatarFallback className="bg-white text-primary font-semibold text-base">
             {collapsed ? "L" : "LP"}
           </AvatarFallback>
         </Avatar>
@@ -103,7 +103,8 @@ export function AppSidebar() {
                       >
                         <item.icon
                           className="h-[18px] w-[18px] shrink-0"
-                          strokeWidth={1.5}
+                          strokeWidth={2}
+                          fill="currentColor"
                         />
                         {!collapsed && <span>{item.title}</span>}
                       </NavLink>
