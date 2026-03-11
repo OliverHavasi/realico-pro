@@ -103,8 +103,7 @@ export function AppSidebar() {
                       >
                         <item.icon
                           className="h-[18px] w-[18px] shrink-0"
-                          strokeWidth={2}
-                          fill="currentColor"
+                          strokeWidth={1.5}
                         />
                         {!collapsed && <span>{item.title}</span>}
                       </NavLink>
