@@ -61,7 +61,7 @@
     --chart-line: 48 100% 48%;
     --chart-area: 48 100% 48%;
 
-    --glass-bg: 0 0% 100% / 0.85;
+    --glass-bg: 0 0% 100%;
     --glass-shadow: 0 16px 32px -8px hsl(0 0% 0% / 0.05);
     --glow-primary: 48 100% 48%;
     --icon-bg: 48 35% 94%;
