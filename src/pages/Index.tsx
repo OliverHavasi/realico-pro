@@ -111,7 +111,7 @@ const Index = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
           {serviceRow1.map((service, i) => (
             <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4 min-h-[160px]">
-              <div className="h-[72px] w-[72px] rounded-full bg-[hsl(0_0%_97%)] flex items-center justify-center">
+              <div className="h-[72px] w-[72px] rounded-full bg-[#FEF9C3] flex items-center justify-center">
                 <img src={service.icon} alt={service.label} className="h-9 w-9" />
               </div>
               <span className="text-[1.05rem] font-semibold tracking-wide">{service.label}</span>
