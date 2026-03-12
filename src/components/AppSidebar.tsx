@@ -84,10 +84,10 @@ export function AppSidebar() {
           )}
         </div>
 
-        <SidebarContent className={`${collapsed ? "px-1" : "px-3"} py-1 overflow-hidden`}>
+        <SidebarContent className={`${collapsed ? "px-1" : "px-3"} py-1 overflow-y-auto`}>
           <SidebarGroup>
             <SidebarGroupContent>
-              <SidebarMenu className="space-y-0.5">
+              <SidebarMenu className="space-y-0.5 2xl:space-y-0.5">
                 {mainItems.map((item) => {
                   const isActive = location.pathname === item.url;
                   return (
@@ -96,7 +96,7 @@ export function AppSidebar() {
                         <NavLink
                           to={item.url}
                           end={item.url === "/"}
-                          className={`flex items-center gap-3 h-[38px] ${collapsed ? "justify-center px-0" : "px-4"} rounded-full text-[13px] tracking-wide transition-colors ${
+                          className={`flex items-center gap-2 2xl:gap-3 h-[32px] 2xl:h-[38px] ${collapsed ? "justify-center px-0" : "px-3 2xl:px-4"} rounded-full text-[12px] 2xl:text-[13px] tracking-wide transition-colors ${
                             isActive
                               ? "bg-secondary text-foreground font-medium"
                               : "text-sidebar-foreground font-normal hover:text-foreground hover:bg-sidebar-accent"
@@ -104,7 +104,7 @@ export function AppSidebar() {
                           activeClassName=""
                         >
                           <item.icon
-                            className="h-[18px] w-[18px] shrink-0"
+                            className="h-4 w-4 2xl:h-[18px] 2xl:w-[18px] shrink-0"
                             weight="fill"
                           />
                           {!collapsed && <span>{item.title}</span>}
