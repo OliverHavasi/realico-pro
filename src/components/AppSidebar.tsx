@@ -1,22 +1,22 @@
 import {
-  LayoutDashboard,
-  CalendarDays,
-  MessageSquare,
-  Home,
+  SquaresFour,
+  CalendarDots,
+  ChatCircleText,
+  HouseSimple,
   Lightbulb,
-  Search,
-  Users,
+  MagnifyingGlass,
+  UsersThree,
   FileText,
-  UserCog,
+  UserGear,
   Star,
-  BarChart3,
-  MessageCircle,
-  Euro,
-  Scale,
-  Settings,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+  ChartBar,
+  ChatTeardropDots,
+  CurrencyEur,
+  Scales,
+  GearSix,
+  CaretLeft,
+  CaretRight,
+} from "@phosphor-icons/react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -34,21 +34,21 @@ import logoSrc from "@/assets/realico_pro_logo.png";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const mainItems = [
-  { title: "Nástenka", url: "/", icon: LayoutDashboard },
-  { title: "Organizér", url: "/organizer", icon: CalendarDays },
-  { title: "Referencie", url: "/references", icon: MessageSquare },
-  { title: "Ponuky", url: "/properties", icon: Home },
+  { title: "Nástenka", url: "/", icon: SquaresFour },
+  { title: "Organizér", url: "/organizer", icon: CalendarDots },
+  { title: "Referencie", url: "/references", icon: ChatCircleText },
+  { title: "Ponuky", url: "/properties", icon: HouseSimple },
   { title: "Tipy na spoluprácu", url: "/tips", icon: Lightbulb },
-  { title: "Dopyty", url: "/demands", icon: Search },
-  { title: "Databáza klientov", url: "/clients", icon: Users },
+  { title: "Dopyty", url: "/demands", icon: MagnifyingGlass },
+  { title: "Databáza klientov", url: "/clients", icon: UsersThree },
   { title: "Dokumenty", url: "/documents", icon: FileText },
-  { title: "Majiteľ / maklér", url: "/agents", icon: UserCog },
+  { title: "Majiteľ / maklér", url: "/agents", icon: UserGear },
   { title: "Marketing", url: "/marketing", icon: Star },
-  { title: "Obchodné výsledky", url: "/results", icon: BarChart3 },
-  { title: "Fórum", url: "/forum", icon: MessageCircle },
-  { title: "Financovanie", url: "/finance", icon: Euro },
-  { title: "Právo a kataster", url: "/legal", icon: Scale },
-  { title: "Nastavenia", url: "/settings", icon: Settings },
+  { title: "Obchodné výsledky", url: "/results", icon: ChartBar },
+  { title: "Fórum", url: "/forum", icon: ChatTeardropDots },
+  { title: "Financovanie", url: "/finance", icon: CurrencyEur },
+  { title: "Právo a kataster", url: "/legal", icon: Scales },
+  { title: "Nastavenia", url: "/settings", icon: GearSix },
 ];
 
 export function AppSidebar() {
@@ -105,8 +105,7 @@ export function AppSidebar() {
                         >
                           <item.icon
                             className="h-[18px] w-[18px] shrink-0"
-                            strokeWidth={2.5}
-                            fill="currentColor"
+                            weight="bold"
                           />
                           {!collapsed && <span>{item.title}</span>}
                         </NavLink>
@@ -125,7 +124,7 @@ export function AppSidebar() {
             onClick={toggleSidebar}
             className="flex items-center justify-center h-9 w-full rounded-full hover:bg-sidebar-accent transition-all duration-300 text-muted-foreground hover:text-foreground"
           >
-            {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
+            {collapsed ? <CaretRight className="h-4 w-4" weight="bold" /> : <CaretLeft className="h-4 w-4" weight="bold" />}
           </button>
         </SidebarFooter>
       </div>
