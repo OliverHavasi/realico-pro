@@ -58,7 +58,7 @@ export function AppSidebar() {
 
   return (
     <Sidebar collapsible="icon" variant="floating" className="border-none">
-      {/* Logo */}
+      {/* Logo - sits on the background, outside the white card */}
       <div className={`h-14 flex items-center ${collapsed ? "justify-center px-2" : "px-5"} transition-all duration-300`}>
         <img
           src={logoSrc}
@@ -67,65 +67,68 @@ export function AppSidebar() {
         />
       </div>
 
-      {/* Profile Section */}
-      <div className={`flex flex-col items-center py-4 ${collapsed ? "px-1" : "px-6"} transition-all duration-300`}>
-        <Avatar className={`${collapsed ? "w-9 h-9" : "w-14 h-14"} transition-all duration-300`} style={{ filter: 'drop-shadow(0 0 12px rgba(243, 195, 0, 0.4))' }}>
-          <AvatarFallback className="bg-white text-primary font-semibold text-base">
-            {collapsed ? "L" : "LP"}
-          </AvatarFallback>
-        </Avatar>
-        {!collapsed && (
-          <>
-            <span className="text-sm font-medium mt-2.5 text-foreground tracking-wide">Lucia Pastorová</span>
-            <span className="text-xs font-normal text-muted-foreground tracking-wide">Maklér</span>
-          </>
-        )}
+      {/* White floating card containing profile, nav, and toggle */}
+      <div className="flex flex-col flex-1 min-h-0 bg-white rounded-[20px] shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)]">
+        {/* Profile Section */}
+        <div className={`flex flex-col items-center py-4 ${collapsed ? "px-1" : "px-6"} transition-all duration-300`}>
+          <Avatar className={`${collapsed ? "w-9 h-9" : "w-14 h-14"} transition-all duration-300`} style={{ filter: 'drop-shadow(0 0 12px rgba(243, 195, 0, 0.4))' }}>
+            <AvatarFallback className="bg-white text-primary font-semibold text-base">
+              {collapsed ? "L" : "LP"}
+            </AvatarFallback>
+          </Avatar>
+          {!collapsed && (
+            <>
+              <span className="text-sm font-medium mt-2.5 text-foreground tracking-wide">Lucia Pastorová</span>
+              <span className="text-xs font-normal text-muted-foreground tracking-wide">Maklér</span>
+            </>
+          )}
+        </div>
+
+        <SidebarContent className={`${collapsed ? "px-1" : "px-3"} py-1`}>
+          <SidebarGroup>
+            <SidebarGroupContent>
+              <SidebarMenu className="space-y-0.5">
+                {mainItems.map((item) => {
+                  const isActive = location.pathname === item.url;
+                  return (
+                    <SidebarMenuItem key={item.title}>
+                      <SidebarMenuButton asChild tooltip={item.title}>
+                        <NavLink
+                          to={item.url}
+                          end={item.url === "/"}
+                          className={`flex items-center gap-3 h-[38px] ${collapsed ? "justify-center px-0" : "px-4"} rounded-full text-[13px] tracking-wide transition-colors ${
+                            isActive
+                              ? "bg-secondary text-foreground font-medium"
+                              : "text-sidebar-foreground font-normal hover:text-foreground hover:bg-sidebar-accent"
+                          }`}
+                          activeClassName=""
+                        >
+                          <item.icon
+                            className="h-[18px] w-[18px] shrink-0"
+                            strokeWidth={2}
+                            fill="currentColor"
+                          />
+                          {!collapsed && <span>{item.title}</span>}
+                        </NavLink>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  );
+                })}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        </SidebarContent>
+
+        {/* Toggle Button at Bottom */}
+        <SidebarFooter className="p-3">
+          <button
+            onClick={toggleSidebar}
+            className="flex items-center justify-center h-9 w-full rounded-full hover:bg-sidebar-accent transition-all duration-300 text-muted-foreground hover:text-foreground"
+          >
+            {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
+          </button>
+        </SidebarFooter>
       </div>
-
-      <SidebarContent className={`${collapsed ? "px-1" : "px-3"} py-1`}>
-        <SidebarGroup>
-          <SidebarGroupContent>
-            <SidebarMenu className="space-y-0.5">
-              {mainItems.map((item) => {
-                const isActive = location.pathname === item.url;
-                return (
-                  <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild tooltip={item.title}>
-                      <NavLink
-                        to={item.url}
-                        end={item.url === "/"}
-                        className={`flex items-center gap-3 h-[38px] ${collapsed ? "justify-center px-0" : "px-4"} rounded-full text-[13px] tracking-wide transition-colors ${
-                          isActive
-                            ? "bg-secondary text-foreground font-medium"
-                            : "text-sidebar-foreground font-normal hover:text-foreground hover:bg-sidebar-accent"
-                        }`}
-                        activeClassName=""
-                      >
-                        <item.icon
-                          className="h-[18px] w-[18px] shrink-0"
-                          strokeWidth={2}
-                          fill="currentColor"
-                        />
-                        {!collapsed && <span>{item.title}</span>}
-                      </NavLink>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                );
-              })}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-      </SidebarContent>
-
-      {/* Toggle Button at Bottom */}
-      <SidebarFooter className="p-3">
-        <button
-          onClick={toggleSidebar}
-          className="flex items-center justify-center h-9 w-full rounded-full hover:bg-sidebar-accent transition-all duration-300 text-muted-foreground hover:text-foreground"
-        >
-          {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
-        </button>
-      </SidebarFooter>
     </Sidebar>
   );
 }
