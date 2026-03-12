@@ -68,7 +68,7 @@ export function AppSidebar() {
       </div>
 
       {/* White floating card containing profile, nav, and toggle */}
-      <div className="flex flex-col flex-1 min-h-0 bg-white rounded-[20px] shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)]">
+      <div className="flex flex-col flex-1 min-h-0 bg-white rounded-[var(--radius)] shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)]">
         {/* Profile Section */}
         <div className={`flex flex-col items-center pt-8 pb-4 ${collapsed ? "px-1" : "px-6"} transition-all duration-300`}>
           <Avatar className={`${collapsed ? "w-9 h-9" : "w-14 h-14"} transition-all duration-300`} style={{ filter: 'drop-shadow(0 0 12px rgba(243, 195, 0, 0.4))' }}>
@@ -84,7 +84,7 @@ export function AppSidebar() {
           )}
         </div>
 
-        <SidebarContent className={`${collapsed ? "px-1" : "px-3"} py-1`}>
+        <SidebarContent className={`${collapsed ? "px-1" : "px-3"} py-1 overflow-hidden`}>
           <SidebarGroup>
             <SidebarGroupContent>
               <SidebarMenu className="space-y-0.5">
@@ -105,7 +105,7 @@ export function AppSidebar() {
                         >
                           <item.icon
                             className="h-[18px] w-[18px] shrink-0"
-                            strokeWidth={2}
+                            strokeWidth={2.5}
                             fill="currentColor"
                           />
                           {!collapsed && <span>{item.title}</span>}

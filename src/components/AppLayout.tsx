@@ -30,7 +30,7 @@ export function AppLayout({ children }: AppLayoutProps) {
                 {shortcuts.map((label, i) => (
                   <button
                     key={`${label}-${i}`}
-                    className="h-7 px-3.5 rounded-full bg-secondary text-[11px] font-medium text-secondary-foreground whitespace-nowrap hover:bg-secondary/80 transition-colors tracking-wider uppercase"
+                    className="h-7 px-3.5 rounded-full bg-secondary text-[11px] font-medium text-secondary-foreground whitespace-nowrap transition-colors tracking-wider uppercase hover:bg-primary hover:text-primary-foreground"
                   >
                     {label}
                   </button>
