@@ -16,6 +16,7 @@ import icoAkcia from "@/assets/ico_akcia_crm.svg";
 import icoObhliadka from "@/assets/ico_obhliadka_crm.svg";
 import icoChat from "@/assets/ico_chat_crm.svg";
 import icoOdovzdavanie from "@/assets/ico_odovzdavanie_crm.svg";
+import icoGraf from "@/assets/ico_graf_crm.svg";
 import { StatsRow } from "@/components/dashboard/StatsRow";
 import { ChartSection } from "@/components/dashboard/ChartSection";
 import { TasksSection } from "@/components/dashboard/TasksSection";
