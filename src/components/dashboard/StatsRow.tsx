@@ -14,7 +14,7 @@ export function StatsRow({ stats }: { stats: Stat[] }) {
         <div key={`${stat.label}-${i}`} className="glass-card p-6 flex flex-col gap-3">
           <div className="flex items-center justify-between">
             <span className="text-sm font-normal text-muted-foreground tracking-wide">{stat.label}</span>
-            <div className="h-12 w-12 rounded-full bg-[#FEF9C3] dark:bg-[hsl(0_0%_20%)] flex items-center justify-center">
+            <div className="h-12 w-12 rounded-full bg-[hsl(var(--icon-bg))] dark:bg-[hsl(0_0%_20%)] flex items-center justify-center">
               <stat.icon className="h-6 w-6 text-primary dark:text-primary" strokeWidth={1.5} />
             </div>
           </div>
