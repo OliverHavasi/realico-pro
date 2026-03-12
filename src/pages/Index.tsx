@@ -80,7 +80,7 @@ const allServices = [
   { icon: icoLupa, label: "AML" },
   { icon: icoSanon, label: "Tip na zmluvu MLS" },
   { icon: icoAkcia, label: "Môj webprofil" },
-  { icon: icoObhliadka, label: "Grafy" },
+  { icon: icoGraf, label: "Grafy" },
 ];
 
 const serviceRow1 = allServices.slice(0, 4);
