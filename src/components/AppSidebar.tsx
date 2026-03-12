@@ -57,7 +57,7 @@ export function AppSidebar() {
   const collapsed = state === "collapsed";
 
   return (
-    <Sidebar collapsible="icon" className="border-none">
+    <Sidebar collapsible="icon" variant="floating" className="border-none">
       {/* Logo */}
       <div className={`h-14 flex items-center ${collapsed ? "justify-center px-2" : "px-5"} transition-all duration-300`}>
         <img
