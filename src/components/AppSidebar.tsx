@@ -34,21 +34,21 @@ import logoSrc from "@/assets/realico_pro_logo.png";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const mainItems = [
-  { title: "Nástenka", url: "/", icon: LayoutDashboard },
-  { title: "Organizér", url: "/organizer", icon: CalendarDays },
-  { title: "Referencie", url: "/references", icon: MessageSquare },
-  { title: "Ponuky", url: "/properties", icon: Home },
+  { title: "Nástenka", url: "/", icon: SquaresFour },
+  { title: "Organizér", url: "/organizer", icon: CalendarDots },
+  { title: "Referencie", url: "/references", icon: ChatCircleText },
+  { title: "Ponuky", url: "/properties", icon: HouseSimple },
   { title: "Tipy na spoluprácu", url: "/tips", icon: Lightbulb },
-  { title: "Dopyty", url: "/demands", icon: Search },
-  { title: "Databáza klientov", url: "/clients", icon: Users },
+  { title: "Dopyty", url: "/demands", icon: MagnifyingGlass },
+  { title: "Databáza klientov", url: "/clients", icon: UsersThree },
   { title: "Dokumenty", url: "/documents", icon: FileText },
-  { title: "Majiteľ / maklér", url: "/agents", icon: UserCog },
+  { title: "Majiteľ / maklér", url: "/agents", icon: UserGear },
   { title: "Marketing", url: "/marketing", icon: Star },
-  { title: "Obchodné výsledky", url: "/results", icon: BarChart3 },
-  { title: "Fórum", url: "/forum", icon: MessageCircle },
-  { title: "Financovanie", url: "/finance", icon: Euro },
-  { title: "Právo a kataster", url: "/legal", icon: Scale },
-  { title: "Nastavenia", url: "/settings", icon: Settings },
+  { title: "Obchodné výsledky", url: "/results", icon: ChartBar },
+  { title: "Fórum", url: "/forum", icon: ChatTeardropDots },
+  { title: "Financovanie", url: "/finance", icon: CurrencyEur },
+  { title: "Právo a kataster", url: "/legal", icon: Scales },
+  { title: "Nastavenia", url: "/settings", icon: GearSix },
 ];
 
 export function AppSidebar() {
