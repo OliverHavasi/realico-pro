@@ -84,7 +84,7 @@ export function AppSidebar() {
           )}
         </div>
 
-        <SidebarContent className={`${collapsed ? "px-1" : "px-3"} py-1 overflow-y-auto`}>
+        <SidebarContent className={`${collapsed ? "px-1" : "px-3"} py-1 overflow-hidden`}>
           <SidebarGroup>
             <SidebarGroupContent>
               <SidebarMenu className="space-y-0.5 2xl:space-y-0.5">
