@@ -21,7 +21,7 @@ export function LatestSalesSection({ properties }: { properties: Property[] }) {
         {properties.map((property) => (
           <div
             key={property.title}
-            className="bg-secondary rounded-[var(--radius)] p-4 transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105 cursor-pointer"
+            className="bg-secondary rounded-[var(--radius)] p-4 transition-all hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-[3px] cursor-pointer"
           >
             <div className="h-40 bg-muted rounded-[8px] mb-3 flex items-center justify-center">
               <Home className="h-8 w-8 text-muted-foreground/30" strokeWidth={1.5} />
