@@ -105,7 +105,7 @@ export function AppSidebar() {
                         >
                           <item.icon
                             className="h-[18px] w-[18px] shrink-0"
-                            weight="bold"
+                            weight="fill"
                           />
                           {!collapsed && <span>{item.title}</span>}
                         </NavLink>
@@ -124,7 +124,7 @@ export function AppSidebar() {
             onClick={toggleSidebar}
             className="flex items-center justify-center h-9 w-full rounded-full hover:bg-sidebar-accent transition-all duration-300 text-muted-foreground hover:text-foreground"
           >
-            {collapsed ? <CaretRight className="h-4 w-4" weight="bold" /> : <CaretLeft className="h-4 w-4" weight="bold" />}
+            {collapsed ? <CaretRight className="h-4 w-4" weight="fill" /> : <CaretLeft className="h-4 w-4" weight="fill" />}
           </button>
         </SidebarFooter>
       </div>
