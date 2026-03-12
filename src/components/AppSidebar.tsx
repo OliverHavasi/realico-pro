@@ -1,22 +1,22 @@
 import {
-  LayoutDashboard,
-  CalendarDays,
-  MessageSquare,
-  Home,
+  SquaresFour,
+  CalendarDots,
+  ChatCircleText,
+  HouseSimple,
   Lightbulb,
-  Search,
-  Users,
+  MagnifyingGlass,
+  UsersThree,
   FileText,
-  UserCog,
+  UserGear,
   Star,
-  BarChart3,
-  MessageCircle,
-  Euro,
-  Scale,
-  Settings,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+  ChartBar,
+  ChatTeardropDots,
+  CurrencyEur,
+  Scales,
+  GearSix,
+  CaretLeft,
+  CaretRight,
+} from "@phosphor-icons/react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
