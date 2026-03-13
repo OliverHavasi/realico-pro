@@ -26,9 +26,7 @@ import { LatestSalesSection } from "@/components/dashboard/LatestSalesSection";
 
 const stats = [
   { label: "Exkluzívne zmluvy", value: "12", icon: MessageSquare, trend: "+3 tento týždeň" },
-  { label: "Plánované body", value: "8", icon: Home, trend: "+2 nové" },
   { label: "Exkluzívne zmluvy", value: "5", icon: MessageSquare, trend: "3 aktívne" },
-  { label: "Plánované body", value: "34", icon: Heart, trend: "cieľ: 50" },
 ];
 
 const chartData = [
