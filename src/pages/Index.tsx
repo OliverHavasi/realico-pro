@@ -107,16 +107,28 @@ const Index = () => {
         {/* Row 2: Chart */}
         <ChartSection chartData={chartData} />
 
-        {/* Row 3: Tasks, Announcements, References */}
+        {/* Row 3: First 5 service cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
+          {allServices.slice(0, 5).map((service, i) => (
+            <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4 min-h-[160px]">
+              <div className="h-[72px] w-[72px] rounded-full bg-[hsl(0_0%_97%)] flex items-center justify-center">
+                <img src={service.icon} alt={service.label} className="h-9 w-9" />
+              </div>
+              <span className="text-[1.05rem] font-semibold tracking-wide">{service.label}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Row 4: Tasks, Announcements, References */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
           <TasksSection tasks={tasks} />
           <AnnouncementsSection announcements={announcements} />
           <ReferencesSection references={references} />
         </div>
 
-        {/* Row 4: Service cards grid (5-5-4+1empty) */}
+        {/* Row 5: Remaining 10 service cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
-          {allServices.map((service, i) => (
+          {allServices.slice(5).map((service, i) => (
             <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4 min-h-[160px]">
               <div className="h-[72px] w-[72px] rounded-full bg-[hsl(0_0%_97%)] flex items-center justify-center">
                 <img src={service.icon} alt={service.label} className="h-9 w-9" />
