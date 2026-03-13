@@ -31,7 +31,7 @@ export function LatestSalesSection({ properties }: { properties: Property[] }) {
             </p>
             <h3 className="text-sm font-medium mt-1 line-clamp-1 text-foreground">{property.title}</h3>
             <p className="text-xs text-muted-foreground tracking-wide">{property.location}</p>
-            <p className="text-muted-foreground font-medium mt-2 text-sm tracking-wide">Počet bodov: {property.price}</p>
+            
           </div>
         ))}
       </div>

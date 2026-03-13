@@ -60,7 +60,7 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
         <p className="text-xs font-normal text-muted-foreground tracking-wide">27.02.2026 · Monika Delejová</p>
         <h3 className="text-sm font-medium mt-1 text-foreground tracking-wide">3 izbový byt s parkovaním</h3>
         <p className="text-xs text-muted-foreground tracking-wide">Hurbanovo</p>
-        <p className="text-muted-foreground font-medium mt-auto pt-3 text-sm tracking-wide">Počet bodov: 18b</p>
+        
       </div>
     </div>
   );
