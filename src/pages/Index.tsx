@@ -79,10 +79,10 @@ const allServices = [
   { icon: icoSanon, label: "Tip na zmluvu MLS" },
   { icon: icoAkcia, label: "Môj webprofil" },
   { icon: icoGraf, label: "Grafy" },
+  { icon: icoSanon, label: "Databáza klientov" },
+  { icon: icoObhliadka, label: "Právo a kataster" },
+  { icon: icoAkcia, label: "Marketing" },
 ];
-
-const serviceRow1 = allServices.slice(0, 4);
-const serviceRows2and3 = allServices.slice(4);
 
 const latestProperties = [
   { title: "3 izbový byt s parkovaním", location: "Hurbanovo", price: "18b", date: "27.02.2026", agent: "Monika Delejová" },
