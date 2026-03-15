@@ -32,13 +32,13 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
             <h2 className="text-lg font-medium tracking-wide">Štatistika zobrazení inzerátov</h2>
             <p className="text-sm text-muted-foreground font-normal tracking-wide">Celkový počet zobrazení: <span className="font-semibold text-foreground">456</span></p>
           </div>
-          <div className="flex items-center gap-0 bg-secondary rounded-full p-1">
+          <div className="flex items-center gap-1 bg-secondary rounded-full p-1">
             <button
               onClick={() => setPeriod("rok")}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
                 period === "rok"
                   ? "bg-primary text-primary-foreground shadow-primary"
-                  : "bg-secondary text-muted-foreground hover:text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
             >
               Rok
@@ -48,7 +48,7 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
                 period === "mesiac"
                   ? "bg-primary text-primary-foreground shadow-primary"
-                  : "bg-secondary text-muted-foreground hover:text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
             >
               Mesiac
