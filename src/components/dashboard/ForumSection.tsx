@@ -24,7 +24,7 @@ export function ForumSection({ posts }: { posts: ForumPost[] }) {
       <div className="space-y-4">
         {posts.map((post, i) => (
           <div key={i} className="flex gap-3 py-3 border-b border-border last:border-0">
-            <div className="h-10 w-10 rounded-full bg-white ring-[1.5px] ring-primary flex items-center justify-center shrink-0 overflow-hidden">
+            <div className="h-10 w-10 rounded-full bg-white ring-[2px] ring-primary flex items-center justify-center shrink-0 overflow-hidden">
               <img src={post.avatar} alt={post.author} className="h-full w-full object-cover" />
             </div>
             <div className="min-w-0">
