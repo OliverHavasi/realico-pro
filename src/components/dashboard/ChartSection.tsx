@@ -1,4 +1,4 @@
-import { Home } from "lucide-react";
+import { Eye } from "lucide-react";
 import {
   AreaChart,
   Area,
@@ -8,6 +8,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import featuredImg from "@/assets/featured_property.jpg";
 
 const formatYAxis = (value: number) => {
   if (value >= 1000) return `${(value / 1000).toFixed(0)}k`;
@@ -53,14 +54,33 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
         </div>
       </div>
 
-      <div className="glass-card p-5 lg:col-span-3 flex flex-col">
-        <div className="h-44 bg-muted rounded-[12px] mb-4 flex items-center justify-center">
-          <Home className="h-10 w-10 text-muted-foreground/30" strokeWidth={1.5} />
+      {/* Featured Property Card */}
+      <div className="lg:col-span-3 rounded-[var(--radius)] bg-card shadow-card overflow-hidden transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-card-hover">
+        <div className="relative h-56 overflow-hidden rounded-t-[var(--radius)]">
+          <img src={featuredImg} alt="Rodinný dom, Bratislava" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+          <div className="absolute bottom-5 left-5 right-5">
+            <span className="px-4 py-1.5 text-xs font-black rounded-[8px] bg-primary text-primary-foreground shadow-primary">
+              Najobľúbenejšia nehnuteľnosť
+            </span>
+            <h3 className="text-white text-2xl font-black mt-3">Rodinný dom, Bratislava</h3>
+            <p className="text-white/80 font-bold mt-1">Staré Mesto · 185 m²</p>
+          </div>
         </div>
-        <p className="text-xs font-normal text-muted-foreground tracking-wide">27.02.2026 · Monika Delejová</p>
-        <h3 className="text-sm font-medium mt-1 text-foreground tracking-wide">3 izbový byt s parkovaním</h3>
-        <p className="text-xs text-muted-foreground tracking-wide">Hurbanovo</p>
-        
+        <div className="p-6">
+          <div className="flex items-center gap-2 mb-4">
+            <Eye className="h-4 w-4 text-muted-foreground" />
+            <span className="text-sm font-semibold text-muted-foreground tracking-wide">Počet zobrazení: 120</span>
+          </div>
+          <div className="flex gap-4">
+            <button className="flex-1 py-3 px-6 rounded-full font-black text-sm bg-primary text-primary-foreground hover:opacity-90 transition-colors duration-200">
+              Zobraziť
+            </button>
+            <button className="flex-1 py-3 px-6 rounded-full font-bold text-sm border-[1.5px] border-border hover:bg-secondary transition-colors duration-200">
+              Upraviť
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
