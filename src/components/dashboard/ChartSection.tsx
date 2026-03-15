@@ -70,7 +70,7 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
         <div className="p-6">
           <div className="flex items-center gap-2 mb-4">
             <Eye className="h-4 w-4 text-muted-foreground" />
-            <span className="text-sm font-semibold text-muted-foreground tracking-wide">Počet zobrazení: 120</span>
+            <span className="text-sm font-normal text-muted-foreground tracking-wide">Počet zobrazení: 120</span>
           </div>
           <div className="flex gap-4">
             <button className="flex-1 py-3 px-6 rounded-full font-black text-sm bg-primary text-primary-foreground hover:opacity-90 transition-colors duration-200">
