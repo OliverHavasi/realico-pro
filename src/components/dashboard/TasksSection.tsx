@@ -9,7 +9,7 @@ export function TasksSection({ tasks }: { tasks: TaskGroup[] }) {
   return (
     <div className="glass-card p-6 lg:col-span-1">
       <div className="flex items-center justify-between mb-5">
-        <h2 className="text-lg font-medium tracking-wide">Vaše úlohy</h2>
+        <h2 className="text-lg font-medium tracking-wide">Úlohy</h2>
         <button className="text-muted-foreground text-sm font-normal hover:text-foreground flex items-center gap-1 transition-colors tracking-wide">
           Organizér <ArrowRight className="h-3.5 w-3.5" />
         </button>

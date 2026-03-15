@@ -12,7 +12,10 @@ export function AnnouncementsSection({ announcements }: { announcements: Announc
   return (
     <div className="glass-card p-6 lg:col-span-1">
       <div className="flex items-center justify-between mb-5">
-        <h2 className="text-lg font-medium tracking-wide">Dôležité oznamy</h2>
+        <div>
+          <h2 className="text-lg font-medium tracking-wide">Novinky a oznamy</h2>
+          <p className="text-sm text-muted-foreground font-normal tracking-wide">Buďte vždy v obraze</p>
+        </div>
         <button className="h-[var(--interactive-height)] px-6 rounded-full bg-primary text-primary-foreground text-[0.9rem] font-medium shadow-primary hover:shadow-primary-hover hover:-translate-y-0.5 active:scale-[0.98] transition-all flex items-center gap-2 tracking-wide">
           <Plus className="h-4 w-4" /> Nový
         </button>
