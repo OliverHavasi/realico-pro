@@ -9,7 +9,7 @@ interface Stat {
 
 export function StatsRow({ stats }: { stats: Stat[] }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
       {stats.map((stat, i) => (
         <div key={`${stat.label}-${i}`} className="glass-card p-6 flex flex-col gap-3">
           <div className="flex items-center justify-between">
