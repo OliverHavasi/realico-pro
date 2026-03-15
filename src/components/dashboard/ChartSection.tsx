@@ -33,7 +33,7 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
             <h2 className="text-lg font-medium tracking-wide">Štatistika zobrazení inzerátov</h2>
             <p className="text-sm text-muted-foreground font-normal tracking-wide">Celkový počet zobrazení: <span className="font-semibold text-foreground">456</span></p>
           </div>
-          <div className="flex gap-1 bg-secondary/60 rounded-full p-1">
+          <div className="flex gap-3 bg-secondary/60 rounded-full p-1">
             <button
               onClick={() => setPeriod("rok")}
               className={cn(
