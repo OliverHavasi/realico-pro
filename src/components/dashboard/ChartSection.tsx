@@ -73,10 +73,10 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
             <span className="text-sm font-normal text-muted-foreground tracking-wide">Počet zobrazení: 120</span>
           </div>
           <div className="flex gap-4">
-            <button className="flex-1 py-3 px-6 rounded-full font-black text-sm bg-primary text-primary-foreground hover:opacity-90 transition-colors duration-200">
+            <button className="flex-1 py-3 px-6 rounded-full font-semibold text-sm bg-primary text-primary-foreground hover:opacity-90 transition-colors duration-200">
               Zobraziť
             </button>
-            <button className="flex-1 py-3 px-6 rounded-full font-bold text-sm border-[1.5px] border-border hover:bg-secondary transition-colors duration-200">
+            <button className="flex-1 py-3 px-6 rounded-full font-medium text-sm border-[1.5px] border-border hover:bg-secondary transition-colors duration-200">
               Upraviť
             </button>
           </div>
