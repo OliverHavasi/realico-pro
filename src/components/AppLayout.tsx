@@ -7,13 +7,11 @@ interface AppLayoutProps {
 }
 
 const shortcuts = [
-  "Kontakty",
-  "Môj e-mail",
-  "AI",
-  "Predané nehnuteľnosti",
+  "E-mail",
   "AML",
-  "E-Podpis",
-  "Moje Výsledky",
+  "Právnik",
+  "Kredity",
+  "Kontakty Realico",
 ];
 
 export function AppLayout({ children }: AppLayoutProps) {

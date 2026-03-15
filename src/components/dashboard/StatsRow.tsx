@@ -19,7 +19,7 @@ export function StatsRow({ stats }: { stats: Stat[] }) {
             </div>
           </div>
           <span className="stat-number text-foreground">{stat.value}</span>
-          <span className="text-xs font-normal text-muted-foreground tracking-wide">{stat.trend}</span>
+          {stat.trend && <span className="text-xs font-normal text-muted-foreground tracking-wide">{stat.trend}</span>}
         </div>
       ))}
     </div>

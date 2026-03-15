@@ -60,9 +60,9 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
           <img src={featuredImg} alt="Rodinný dom, Bratislava" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
           <div className="absolute bottom-5 left-5 right-5">
-            <span className="px-4 py-1.5 text-xs font-black rounded-[8px] bg-primary text-primary-foreground shadow-primary">
-              Najobľúbenejšia nehnuteľnosť
-            </span>
+          <span className="px-4 py-1.5 text-xs font-semibold rounded-[8px] bg-primary text-primary-foreground shadow-primary">
+            Najobľúbenejšia nehnuteľnosť
+          </span>
           <h3 className="text-white text-2xl font-semibold mt-3">Rodinný dom, Bratislava</h3>
             <p className="text-white/80 font-normal mt-1">Staré Mesto · 185 m²</p>
           </div>
