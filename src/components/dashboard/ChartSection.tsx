@@ -1,5 +1,6 @@
 import { Eye } from "lucide-react";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 import {
   AreaChart,
   Area,
@@ -32,24 +33,26 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
             <h2 className="text-lg font-medium tracking-wide">Štatistika zobrazení inzerátov</h2>
             <p className="text-sm text-muted-foreground font-normal tracking-wide">Celkový počet zobrazení: <span className="font-semibold text-foreground">456</span></p>
           </div>
-          <div className="flex items-center gap-1 bg-secondary rounded-full p-1">
+          <div className="flex gap-2 bg-secondary/60 rounded-full p-1">
             <button
               onClick={() => setPeriod("rok")}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+              className={cn(
+                "px-4 py-2 rounded-full font-medium text-sm transition-all duration-200",
                 period === "rok"
-                  ? "bg-primary text-primary-foreground shadow-primary"
+                  ? "bg-primary text-primary-foreground shadow-sm"
                   : "text-muted-foreground hover:text-foreground"
-              }`}
+              )}
             >
               Rok
             </button>
             <button
               onClick={() => setPeriod("mesiac")}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+              className={cn(
+                "px-4 py-2 rounded-full font-medium text-sm transition-all duration-200",
                 period === "mesiac"
-                  ? "bg-primary text-primary-foreground shadow-primary"
+                  ? "bg-primary text-primary-foreground shadow-sm"
                   : "text-muted-foreground hover:text-foreground"
-              }`}
+              )}
             >
               Mesiac
             </button>
