@@ -40,7 +40,7 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
                 "px-4 py-2 rounded-full font-medium text-sm transition-all duration-200",
                 period === "rok"
                   ? "bg-primary text-primary-foreground shadow-sm"
-                  : "text-muted-foreground hover:text-foreground"
+                  : "bg-secondary text-muted-foreground hover:text-foreground"
               )}
             >
               Rok
@@ -51,7 +51,7 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
                 "px-4 py-2 rounded-full font-medium text-sm transition-all duration-200",
                 period === "mesiac"
                   ? "bg-primary text-primary-foreground shadow-sm"
-                  : "text-muted-foreground hover:text-foreground"
+                  : "bg-secondary text-muted-foreground hover:text-foreground"
               )}
             >
               Mesiac
