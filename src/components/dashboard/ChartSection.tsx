@@ -63,8 +63,8 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
             <span className="px-4 py-1.5 text-xs font-black rounded-[8px] bg-primary text-primary-foreground shadow-primary">
               Najobľúbenejšia nehnuteľnosť
             </span>
-            <h3 className="text-white text-2xl font-black mt-3">Rodinný dom, Bratislava</h3>
-            <p className="text-white/80 font-bold mt-1">Staré Mesto · 185 m²</p>
+          <h3 className="text-white text-2xl font-semibold mt-3">Rodinný dom, Bratislava</h3>
+            <p className="text-white/80 font-normal mt-1">Staré Mesto · 185 m²</p>
           </div>
         </div>
         <div className="p-6">
