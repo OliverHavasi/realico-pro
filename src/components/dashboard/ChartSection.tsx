@@ -1,4 +1,5 @@
 import { Eye } from "lucide-react";
+import { useState } from "react";
 import {
   AreaChart,
   Area,
@@ -21,12 +22,38 @@ interface ChartDataPoint {
 }
 
 export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
+  const [period, setPeriod] = useState<"rok" | "mesiac">("rok");
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-10 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
       <div className="glass-card p-6 lg:col-span-7">
-        <div className="mb-4">
-          <h2 className="text-lg font-medium tracking-wide">Štatistika zobrazení</h2>
-          <p className="text-sm text-muted-foreground font-normal tracking-wide">Prehľad výkonu vašich nehnuteľností</p>
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h2 className="text-lg font-medium tracking-wide">Štatistika zobrazení inzerátov</h2>
+            <p className="text-sm text-muted-foreground font-normal tracking-wide">Celkový počet zobrazení: <span className="font-semibold text-foreground">456</span></p>
+          </div>
+          <div className="flex items-center gap-1 bg-secondary rounded-full p-1">
+            <button
+              onClick={() => setPeriod("rok")}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                period === "rok"
+                  ? "bg-primary text-primary-foreground shadow-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Rok
+            </button>
+            <button
+              onClick={() => setPeriod("mesiac")}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                period === "mesiac"
+                  ? "bg-primary text-primary-foreground shadow-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Mesiac
+            </button>
+          </div>
         </div>
         <div className="h-[280px]">
           <ResponsiveContainer width="100%" height="100%">
@@ -60,10 +87,10 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
           <img src={featuredImg} alt="Rodinný dom, Bratislava" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
           <div className="absolute bottom-5 left-5 right-5">
-          <span className="px-4 py-1.5 text-xs font-semibold rounded-[8px] bg-primary text-primary-foreground shadow-primary">
-            Najobľúbenejšia nehnuteľnosť
-          </span>
-          <h3 className="text-white text-2xl font-semibold mt-3">Rodinný dom, Bratislava</h3>
+            <span className="px-4 py-1.5 text-xs font-medium rounded-full bg-primary text-primary-foreground shadow-primary">
+              Najobľúbenejšia nehnuteľnosť
+            </span>
+            <h3 className="text-white text-2xl font-semibold mt-3">Rodinný dom, Bratislava</h3>
             <p className="text-white/80 font-normal mt-1">Staré Mesto · 185 m²</p>
           </div>
         </div>

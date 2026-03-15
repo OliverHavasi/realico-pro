@@ -20,8 +20,8 @@ import icoGraf from "@/assets/ico_graf_crm.svg";
 import { StatsRow } from "@/components/dashboard/StatsRow";
 import { ChartSection } from "@/components/dashboard/ChartSection";
 import { TasksSection } from "@/components/dashboard/TasksSection";
-import { ReferencesSection } from "@/components/dashboard/ReferencesSection";
 import { AnnouncementsSection } from "@/components/dashboard/AnnouncementsSection";
+import { ForumSection } from "@/components/dashboard/ForumSection";
 import { LatestSalesSection } from "@/components/dashboard/LatestSalesSection";
 
 const stats = [
@@ -53,10 +53,23 @@ const tasks = [
   { date: "15. marca 2026", items: [{ text: "Vizitka v digitálnom formáte", done: false }] },
 ];
 
-const references = [
-  { name: "RNDr. Daniela Račková", date: "26.02.2026", text: "Vysoká profesionalita a spokojnosť!", initials: "DR" },
-  { name: "Ing. Zuzana Janotová", date: "25.02.2026", text: "Zo služieb som bola maximálne spokojná.", initials: "ZJ" },
-  { name: "Ing. Roman Sedláček", date: "25.02.2026", text: "Pán maklér veľmi odborne zdokumentoval celý proces.", initials: "RS" },
+const forumPosts = [
+  {
+    author: "Ing. Rastislav Štalmach",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+    category: "Všeobecná diskusia",
+    date: "09.03.2026 11:07",
+    title: "E podpis - otázky a skúsenosti",
+    preview: "Bola tu otázka: Čo sa stane ak podpíšu všetci účastníci cez e-podpis daný dokument? Odpoveď: Ak to podpíše posledný v poradí tak všetkým účastn...",
+  },
+  {
+    author: "Ing. Rastislav Štalmach",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+    category: "Všeobecná diskusia",
+    date: "06.03.2026 17:06",
+    title: "E podpis - otázky a skúsenosti",
+    preview: "Zakladám tému na používanie E-podpisu. V záložke videoškolenie máte videonávod ako používať e-podpis. https:/...",
+  },
 ];
 
 const announcements = [
@@ -69,22 +82,25 @@ const announcements = [
   },
 ];
 
-const allServices = [
+const topServices = [
   { icon: icoBuy, label: "Organizér" },
-  { icon: icoLupa, label: "E-maily" },
   { icon: icoSanon, label: "Ponuky" },
+  { icon: icoObhliadka, label: "E-obhliadky" },
   { icon: icoAkcia, label: "Dopyty" },
-  { icon: icoObhliadka, label: "E-podpis" },
-  { icon: icoChat, label: "Školenia" },
-  { icon: icoOdovzdavanie, label: "Fórum" },
-  { icon: icoBuy, label: "Hypotéky" },
-  { icon: icoLupa, label: "AML" },
-  { icon: icoSanon, label: "Tip na zmluvu MLS" },
-  { icon: icoAkcia, label: "Môj webprofil" },
-  { icon: icoGraf, label: "Grafy" },
-  { icon: icoSanon, label: "Databáza klientov" },
-  { icon: icoObhliadka, label: "Právo a kataster" },
-  { icon: icoAkcia, label: "Marketing" },
+  { icon: icoLupa, label: "Databáza klientov" },
+];
+
+const bottomServices = [
+  { icon: icoChat, label: "Školenia a kurzy" },
+  { icon: icoGraf, label: "Štatistiky" },
+  { icon: icoBuy, label: "Financovanie" },
+  { icon: icoOdovzdavanie, label: "Spolupráca - MLS" },
+  { icon: icoSanon, label: "Právo, Kataster, Dane" },
+  { icon: icoAkcia, label: "Dokumenty a tlačivá" },
+  { icon: icoBuy, label: "Obchody" },
+  { icon: icoLupa, label: "Marketing" },
+  { icon: icoObhliadka, label: "Môj webprofil" },
+  { icon: icoChat, label: "Referencie" },
 ];
 
 const latestProperties = [
@@ -110,9 +126,9 @@ const Index = () => {
         {/* Row 2: Chart */}
         <ChartSection chartData={chartData} />
 
-        {/* Row 3: First 5 service cards */}
+        {/* Row 3: Top service cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
-          {allServices.slice(0, 5).map((service, i) => (
+          {topServices.map((service, i) => (
             <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4 min-h-[160px]">
               <div className="h-[72px] w-[72px] rounded-full bg-[hsl(0_0%_97%)] flex items-center justify-center">
                 <img src={service.icon} alt={service.label} className="h-9 w-9" />
@@ -122,16 +138,16 @@ const Index = () => {
           ))}
         </div>
 
-        {/* Row 4: Tasks, Announcements, References */}
+        {/* Row 4: Tasks, Announcements, Forum */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
           <TasksSection tasks={tasks} />
           <AnnouncementsSection announcements={announcements} />
-          <ReferencesSection references={references} />
+          <ForumSection posts={forumPosts} />
         </div>
 
-        {/* Row 5: Remaining 10 service cards */}
+        {/* Row 5: Bottom service cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
-          {allServices.slice(5).map((service, i) => (
+          {bottomServices.map((service, i) => (
             <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4 min-h-[160px]">
               <div className="h-[72px] w-[72px] rounded-full bg-[hsl(0_0%_97%)] flex items-center justify-center">
                 <img src={service.icon} alt={service.label} className="h-9 w-9" />
@@ -141,7 +157,7 @@ const Index = () => {
           ))}
         </div>
 
-        {/* Row 5: Latest Sales */}
+        {/* Row 6: Latest Sales */}
         <LatestSalesSection properties={latestProperties} />
       </div>
     </AppLayout>
