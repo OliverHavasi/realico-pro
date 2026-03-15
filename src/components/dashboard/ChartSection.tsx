@@ -60,23 +60,23 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
           <img src={featuredImg} alt="Rodinný dom, Bratislava" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
           <div className="absolute bottom-5 left-5 right-5">
-            <span className="px-4 py-1.5 text-xs font-black rounded-[8px] bg-primary text-primary-foreground shadow-primary">
-              Najobľúbenejšia nehnuteľnosť
-            </span>
-            <h3 className="text-white text-2xl font-black mt-3">Rodinný dom, Bratislava</h3>
-            <p className="text-white/80 font-bold mt-1">Staré Mesto · 185 m²</p>
+          <span className="px-4 py-1.5 text-xs font-semibold rounded-[8px] bg-primary text-primary-foreground shadow-primary">
+            Najobľúbenejšia nehnuteľnosť
+          </span>
+          <h3 className="text-white text-2xl font-semibold mt-3">Rodinný dom, Bratislava</h3>
+            <p className="text-white/80 font-normal mt-1">Staré Mesto · 185 m²</p>
           </div>
         </div>
         <div className="p-6">
           <div className="flex items-center gap-2 mb-4">
             <Eye className="h-4 w-4 text-muted-foreground" />
-            <span className="text-sm font-semibold text-muted-foreground tracking-wide">Počet zobrazení: 120</span>
+            <span className="text-sm font-normal text-muted-foreground tracking-wide">Počet zobrazení: 120</span>
           </div>
           <div className="flex gap-4">
-            <button className="flex-1 py-3 px-6 rounded-full font-black text-sm bg-primary text-primary-foreground hover:opacity-90 transition-colors duration-200">
+            <button className="flex-1 py-3 px-6 rounded-full font-semibold text-sm bg-primary text-primary-foreground hover:opacity-90 transition-colors duration-200">
               Zobraziť
             </button>
-            <button className="flex-1 py-3 px-6 rounded-full font-bold text-sm border-[1.5px] border-border hover:bg-secondary transition-colors duration-200">
+            <button className="flex-1 py-3 px-6 rounded-full font-medium text-sm border-[1.5px] border-border hover:bg-secondary transition-colors duration-200">
               Upraviť
             </button>
           </div>

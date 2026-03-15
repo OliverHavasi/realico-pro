@@ -25,8 +25,11 @@ import { AnnouncementsSection } from "@/components/dashboard/AnnouncementsSectio
 import { LatestSalesSection } from "@/components/dashboard/LatestSalesSection";
 
 const stats = [
-  { label: "Exkluzívne zmluvy", value: "12", icon: MessageSquare, trend: "+3 tento týždeň" },
-  { label: "Exkluzívne zmluvy", value: "5", icon: MessageSquare, trend: "3 aktívne" },
+  { label: "Aktívnych inzerátov", value: "12", icon: Home, trend: "" },
+  { label: "Od 1. marca", value: "24", icon: Clock, trend: "" },
+  { label: "Obhliadok", value: "45", icon: Star, trend: "" },
+  { label: "Rezervácií", value: "25", icon: Heart, trend: "" },
+  { label: "Zrealizovaných obchodov", value: "12", icon: CheckCircle2, trend: "" },
 ];
 
 const chartData = [
