@@ -98,16 +98,16 @@ const topServices = [
 ];
 
 const bottomServices = [
-  { icon: icoChat, label: "Školenia a kurzy" },
-  { icon: icoGraf, label: "Štatistiky" },
+  { icon: icoSkolenia, label: "Školenia a kurzy" },
+  { icon: icoStatistiky, label: "Štatistiky" },
   { icon: icoFinancovanie, label: "Financovanie" },
-  { icon: icoOdovzdavanie, label: "Spolupráca - MLS" },
-  { icon: icoSanon, label: "Právo, Kataster, Dane" },
+  { icon: icoSpolupraca, label: "Spolupráca - MLS" },
+  { icon: icoPravo, label: "Právo, Kataster, Dane" },
   { icon: icoDokumenty, label: "Dokumenty a tlačivá" },
   { icon: icoObchody, label: "Obchody" },
   { icon: icoMarketing, label: "Marketing" },
   { icon: icoMojWebprofil, label: "Môj webprofil" },
-  { icon: icoChat, label: "Referencie" },
+  { icon: icoReferencie, label: "Referencie" },
 ];
 
 const latestProperties = [
