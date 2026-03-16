@@ -9,21 +9,21 @@ import {
   Heart,
   MessageSquare,
 } from "lucide-react";
-import icoBuy from "@/assets/ico_buy_crm.svg";
-import icoLupa from "@/assets/ico_lupa_crm.svg";
-import icoSanon from "@/assets/ico_sanon_crm.svg";
-import icoAkcia from "@/assets/ico_akcia_crm.svg";
-import icoObhliadka from "@/assets/ico_obhliadka_crm.svg";
-import icoChat from "@/assets/ico_chat_crm.svg";
-import icoOdovzdavanie from "@/assets/ico_odovzdavanie_crm.svg";
-import icoGraf from "@/assets/ico_graf_crm.svg";
-import icoDatabazaKlientov from "@/assets/databaza_klientov.svg";
-import icoDokumenty from "@/assets/dokumenty_a_tlaciva.svg";
+import icoOrganizer from "@/assets/organizer.svg";
+import icoPonuky from "@/assets/ponuky.svg";
+import icoObhliadky from "@/assets/obhliadky.svg";
 import icoDopyty from "@/assets/dopyty.svg";
+import icoDatabazaKlientov from "@/assets/databaza_klientov.svg";
+import icoSkolenia from "@/assets/skolenia_a_kurzy.svg";
+import icoStatistiky from "@/assets/statistiky.svg";
 import icoFinancovanie from "@/assets/financovanie.svg";
+import icoSpolupraca from "@/assets/spolupraca_mls.svg";
+import icoPravo from "@/assets/pravo_kataster_dane.svg";
+import icoDokumenty from "@/assets/dokumenty_a_tlaciva.svg";
+import icoObchody from "@/assets/obchody.svg";
 import icoMarketing from "@/assets/marketing.svg";
 import icoMojWebprofil from "@/assets/moj_webprofil.svg";
-import icoObchody from "@/assets/obchody.svg";
+import icoReferencie from "@/assets/referencie.svg";
 import { StatsRow } from "@/components/dashboard/StatsRow";
 import { ChartSection } from "@/components/dashboard/ChartSection";
 import { TasksSection } from "@/components/dashboard/TasksSection";
