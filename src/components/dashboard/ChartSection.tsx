@@ -86,7 +86,7 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
 
       {/* Featured Property Card */}
       <div className="lg:col-span-3 rounded-[var(--radius)] bg-card shadow-card overflow-hidden transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-card-hover">
-        <div className="relative h-56 overflow-hidden rounded-t-[var(--radius)]">
+        <div className="relative h-64 overflow-hidden rounded-t-[var(--radius)]">
           <img src={featuredImg} alt="Rodinný dom, Bratislava" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
           <div className="absolute bottom-5 left-5 right-5">
@@ -97,7 +97,7 @@ export function ChartSection({ chartData }: { chartData: ChartDataPoint[] }) {
             <p className="text-white/80 font-normal mt-1">Staré Mesto · 185 m²</p>
           </div>
         </div>
-        <div className="p-6">
+        <div className="p-5 flex flex-col justify-center">
           <div className="flex items-center gap-2 mb-4">
             <Eye className="h-4 w-4 text-muted-foreground" />
             <span className="text-sm font-normal text-muted-foreground tracking-wide">Počet zobrazení: 120</span>
