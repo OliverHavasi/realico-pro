@@ -90,9 +90,9 @@ const announcements = [
 ];
 
 const topServices = [
-  { icon: icoBuy, label: "Organizér" },
-  { icon: icoSanon, label: "Ponuky" },
-  { icon: icoObhliadka, label: "E-obhliadky" },
+  { icon: icoOrganizer, label: "Organizér" },
+  { icon: icoPonuky, label: "Ponuky" },
+  { icon: icoObhliadky, label: "E-obhliadky" },
   { icon: icoDopyty, label: "Dopyty" },
   { icon: icoDatabazaKlientov, label: "Databáza klientov" },
 ];
