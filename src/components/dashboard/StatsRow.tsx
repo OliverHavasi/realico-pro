@@ -16,7 +16,7 @@ export function StatsRow({ stats }: { stats: Stat[] }) {
         const isPositive = (stat.change ?? 0) > 0;
         const hasChange = stat.change !== undefined && stat.change !== 0;
         return (
-          <div key={`${stat.label}-${i}`} className="glass-card p-6 flex flex-col gap-3 relative">
+          <div key={`${stat.label}-${i}`} className="glass-card p-7 flex flex-col gap-4 relative">
             <div className="flex items-start justify-between">
               <div className="h-12 w-12 rounded-full bg-[#fdf8eb] dark:bg-[hsl(0_0%_20%)] flex items-center justify-center">
                 <stat.icon className="h-6 w-6 text-primary dark:text-primary" strokeWidth={1.5} />
