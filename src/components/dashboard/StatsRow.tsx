@@ -18,12 +18,12 @@ export function StatsRow({ stats }: { stats: Stat[] }) {
         return (
           <div key={`${stat.label}-${i}`} className="glass-card px-5 pt-4 pb-5 flex flex-col">
             <div className="flex items-start justify-between mb-4 -mt-1">
-              <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center -ml-[5px]">
-                <stat.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
+              <div className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center -ml-[5px]">
+                <stat.icon className="h-[18px] w-[18px] text-primary" strokeWidth={1.5} />
               </div>
               {hasChange && (
                 <div className={cn(
-                  "inline-flex items-center gap-1 rounded-[6px] px-2 py-0.5 font-medium text-xs -mr-[5px]",
+                  "inline-flex items-center gap-1 rounded-[7px] px-2.5 py-1 font-medium text-xs -mr-[5px]",
                   isPositive
                     ? "bg-[rgba(34,179,87,0.1)] text-[#22B357]"
                     : "bg-[rgba(229,62,62,0.1)] text-[#E53E3E]"
