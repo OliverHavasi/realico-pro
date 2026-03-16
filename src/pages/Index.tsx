@@ -100,13 +100,13 @@ const topServices = [
 const bottomServices = [
   { icon: icoChat, label: "Školenia a kurzy" },
   { icon: icoGraf, label: "Štatistiky" },
-  { icon: icoBuy, label: "Financovanie" },
+  { icon: icoFinancovanie, label: "Financovanie" },
   { icon: icoOdovzdavanie, label: "Spolupráca - MLS" },
   { icon: icoSanon, label: "Právo, Kataster, Dane" },
-  { icon: icoAkcia, label: "Dokumenty a tlačivá" },
-  { icon: icoBuy, label: "Obchody" },
-  { icon: icoLupa, label: "Marketing" },
-  { icon: icoObhliadka, label: "Môj webprofil" },
+  { icon: icoDokumenty, label: "Dokumenty a tlačivá" },
+  { icon: icoObchody, label: "Obchody" },
+  { icon: icoMarketing, label: "Marketing" },
+  { icon: icoMojWebprofil, label: "Môj webprofil" },
   { icon: icoChat, label: "Referencie" },
 ];
 
