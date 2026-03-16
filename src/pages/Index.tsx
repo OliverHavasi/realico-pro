@@ -9,21 +9,21 @@ import {
   Heart,
   MessageSquare,
 } from "lucide-react";
-import icoBuy from "@/assets/ico_buy_crm.svg";
-import icoLupa from "@/assets/ico_lupa_crm.svg";
-import icoSanon from "@/assets/ico_sanon_crm.svg";
-import icoAkcia from "@/assets/ico_akcia_crm.svg";
-import icoObhliadka from "@/assets/ico_obhliadka_crm.svg";
-import icoChat from "@/assets/ico_chat_crm.svg";
-import icoOdovzdavanie from "@/assets/ico_odovzdavanie_crm.svg";
-import icoGraf from "@/assets/ico_graf_crm.svg";
-import icoDatabazaKlientov from "@/assets/databaza_klientov.svg";
-import icoDokumenty from "@/assets/dokumenty_a_tlaciva.svg";
+import icoOrganizer from "@/assets/organizer.svg";
+import icoPonuky from "@/assets/ponuky.svg";
+import icoObhliadky from "@/assets/obhliadky.svg";
 import icoDopyty from "@/assets/dopyty.svg";
+import icoDatabazaKlientov from "@/assets/databaza_klientov.svg";
+import icoSkolenia from "@/assets/skolenia_a_kurzy.svg";
+import icoStatistiky from "@/assets/statistiky.svg";
 import icoFinancovanie from "@/assets/financovanie.svg";
+import icoSpolupraca from "@/assets/spolupraca_mls.svg";
+import icoPravo from "@/assets/pravo_kataster_dane.svg";
+import icoDokumenty from "@/assets/dokumenty_a_tlaciva.svg";
+import icoObchody from "@/assets/obchody.svg";
 import icoMarketing from "@/assets/marketing.svg";
 import icoMojWebprofil from "@/assets/moj_webprofil.svg";
-import icoObchody from "@/assets/obchody.svg";
+import icoReferencie from "@/assets/referencie.svg";
 import { StatsRow } from "@/components/dashboard/StatsRow";
 import { ChartSection } from "@/components/dashboard/ChartSection";
 import { TasksSection } from "@/components/dashboard/TasksSection";
@@ -90,24 +90,24 @@ const announcements = [
 ];
 
 const topServices = [
-  { icon: icoBuy, label: "Organizér" },
-  { icon: icoSanon, label: "Ponuky" },
-  { icon: icoObhliadka, label: "E-obhliadky" },
+  { icon: icoOrganizer, label: "Organizér" },
+  { icon: icoPonuky, label: "Ponuky" },
+  { icon: icoObhliadky, label: "E-obhliadky" },
   { icon: icoDopyty, label: "Dopyty" },
   { icon: icoDatabazaKlientov, label: "Databáza klientov" },
 ];
 
 const bottomServices = [
-  { icon: icoChat, label: "Školenia a kurzy" },
-  { icon: icoGraf, label: "Štatistiky" },
+  { icon: icoSkolenia, label: "Školenia a kurzy" },
+  { icon: icoStatistiky, label: "Štatistiky" },
   { icon: icoFinancovanie, label: "Financovanie" },
-  { icon: icoOdovzdavanie, label: "Spolupráca - MLS" },
-  { icon: icoSanon, label: "Právo, Kataster, Dane" },
+  { icon: icoSpolupraca, label: "Spolupráca - MLS" },
+  { icon: icoPravo, label: "Právo, Kataster, Dane" },
   { icon: icoDokumenty, label: "Dokumenty a tlačivá" },
   { icon: icoObchody, label: "Obchody" },
   { icon: icoMarketing, label: "Marketing" },
   { icon: icoMojWebprofil, label: "Môj webprofil" },
-  { icon: icoChat, label: "Referencie" },
+  { icon: icoReferencie, label: "Referencie" },
 ];
 
 const latestProperties = [
@@ -137,9 +137,7 @@ const Index = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
           {topServices.map((service, i) => (
             <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4 min-h-[160px]">
-              <div className="h-[72px] w-[72px] rounded-full bg-[hsl(0_0%_97%)] flex items-center justify-center">
-                <img src={service.icon} alt={service.label} className="h-9 w-9" />
-              </div>
+              <img src={service.icon} alt={service.label} className="h-14 w-14" />
               <span className="text-[1.05rem] font-semibold tracking-wide">{service.label}</span>
             </div>
           ))}
@@ -156,9 +154,7 @@ const Index = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
           {bottomServices.map((service, i) => (
             <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4 min-h-[160px]">
-              <div className="h-[72px] w-[72px] rounded-full bg-[hsl(0_0%_97%)] flex items-center justify-center">
-                <img src={service.icon} alt={service.label} className="h-9 w-9" />
-              </div>
+              <img src={service.icon} alt={service.label} className="h-14 w-14" />
               <span className="text-[1.05rem] font-semibold tracking-wide">{service.label}</span>
             </div>
           ))}
