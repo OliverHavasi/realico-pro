@@ -32,11 +32,11 @@ import { ForumSection } from "@/components/dashboard/ForumSection";
 import { LatestSalesSection } from "@/components/dashboard/LatestSalesSection";
 
 const stats = [
-  { label: "Aktívnych inzerátov", value: "12", icon: Home, trend: "", trendValue: "12.5%", trendDirection: "up" as const },
-  { label: "Od 1. marca", value: "24", icon: Clock, trend: "", trendValue: "8.1%", trendDirection: "up" as const },
-  { label: "Obhliadok", value: "45", icon: Star, trend: "", trendValue: "5.3%", trendDirection: "up" as const },
-  { label: "Rezervácií", value: "25", icon: Heart, trend: "", trendValue: "2.4%", trendDirection: "down" as const },
-  { label: "Zrealizovaných obchodov", value: "12", icon: CheckCircle2, trend: "", trendValue: "3.7%", trendDirection: "up" as const },
+  { label: "Aktívnych inzerátov", value: "12", icon: Home, trend: "" },
+  { label: "Od 1. marca", value: "24", icon: Clock, trend: "" },
+  { label: "Obhliadok", value: "45", icon: Star, trend: "" },
+  { label: "Rezervácií", value: "25", icon: Heart, trend: "" },
+  { label: "Zrealizovaných obchodov", value: "12", icon: CheckCircle2, trend: "" },
 ];
 
 const chartData = [
