@@ -18,7 +18,7 @@ export function StatsRow({ stats }: { stats: Stat[] }) {
         return (
           <div key={`${stat.label}-${i}`} className="glass-card p-6 flex flex-col">
             <div className="flex items-start justify-between mb-6 -mt-2">
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center -ml-[7px]">">
+              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center -ml-[7px]">
                 <stat.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
               </div>
               {hasChange && (
