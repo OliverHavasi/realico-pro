@@ -93,8 +93,8 @@ const topServices = [
   { icon: icoBuy, label: "Organizér" },
   { icon: icoSanon, label: "Ponuky" },
   { icon: icoObhliadka, label: "E-obhliadky" },
-  { icon: icoAkcia, label: "Dopyty" },
-  { icon: icoLupa, label: "Databáza klientov" },
+  { icon: icoDopyty, label: "Dopyty" },
+  { icon: icoDatabazaKlientov, label: "Databáza klientov" },
 ];
 
 const bottomServices = [
