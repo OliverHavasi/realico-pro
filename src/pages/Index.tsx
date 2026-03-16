@@ -136,7 +136,7 @@ const Index = () => {
         {/* Row 3: Top service cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-[var(--spacing-uniform)] lg:gap-[var(--spacing-lg)]">
           {topServices.map((service, i) => (
-            <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-4 min-h-[160px]">
+            <div key={i} className="glass-card p-6 flex flex-col items-center justify-center gap-5 min-h-[160px]">
               <img src={service.icon} alt={service.label} className="h-11 w-11" />
               <span className="text-[1.05rem] font-semibold tracking-wide">{service.label}</span>
             </div>
