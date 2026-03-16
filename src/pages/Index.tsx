@@ -17,6 +17,13 @@ import icoObhliadka from "@/assets/ico_obhliadka_crm.svg";
 import icoChat from "@/assets/ico_chat_crm.svg";
 import icoOdovzdavanie from "@/assets/ico_odovzdavanie_crm.svg";
 import icoGraf from "@/assets/ico_graf_crm.svg";
+import icoDatabazaKlientov from "@/assets/databaza_klientov.svg";
+import icoDokumenty from "@/assets/dokumenty_a_tlaciva.svg";
+import icoDopyty from "@/assets/dopyty.svg";
+import icoFinancovanie from "@/assets/financovanie.svg";
+import icoMarketing from "@/assets/marketing.svg";
+import icoMojWebprofil from "@/assets/moj_webprofil.svg";
+import icoObchody from "@/assets/obchody.svg";
 import { StatsRow } from "@/components/dashboard/StatsRow";
 import { ChartSection } from "@/components/dashboard/ChartSection";
 import { TasksSection } from "@/components/dashboard/TasksSection";
@@ -86,20 +93,20 @@ const topServices = [
   { icon: icoBuy, label: "Organizér" },
   { icon: icoSanon, label: "Ponuky" },
   { icon: icoObhliadka, label: "E-obhliadky" },
-  { icon: icoAkcia, label: "Dopyty" },
-  { icon: icoLupa, label: "Databáza klientov" },
+  { icon: icoDopyty, label: "Dopyty" },
+  { icon: icoDatabazaKlientov, label: "Databáza klientov" },
 ];
 
 const bottomServices = [
   { icon: icoChat, label: "Školenia a kurzy" },
   { icon: icoGraf, label: "Štatistiky" },
-  { icon: icoBuy, label: "Financovanie" },
+  { icon: icoFinancovanie, label: "Financovanie" },
   { icon: icoOdovzdavanie, label: "Spolupráca - MLS" },
   { icon: icoSanon, label: "Právo, Kataster, Dane" },
-  { icon: icoAkcia, label: "Dokumenty a tlačivá" },
-  { icon: icoBuy, label: "Obchody" },
-  { icon: icoLupa, label: "Marketing" },
-  { icon: icoObhliadka, label: "Môj webprofil" },
+  { icon: icoDokumenty, label: "Dokumenty a tlačivá" },
+  { icon: icoObchody, label: "Obchody" },
+  { icon: icoMarketing, label: "Marketing" },
+  { icon: icoMojWebprofil, label: "Môj webprofil" },
   { icon: icoChat, label: "Referencie" },
 ];
 
