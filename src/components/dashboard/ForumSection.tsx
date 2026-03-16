@@ -24,7 +24,7 @@ export function ForumSection({ posts }: { posts: ForumPost[] }) {
       <div className="space-y-4">
         {posts.map((post, i) => (
           <div key={i} className="flex gap-3 py-3 border-b border-border last:border-0">
-            <div className="h-10 w-10 rounded-full bg-white ring-[1.5px] ring-primary flex items-center justify-center shrink-0 text-sm font-semibold text-primary">
+            <div className="h-10 w-10 rounded-full bg-white border-[1.5px] border-primary flex items-center justify-center shrink-0 text-sm font-semibold text-primary">
               {post.author.split(' ').map(n => n[0]).join('').slice(0, 2)}
             </div>
             <div className="min-w-0">
