@@ -23,7 +23,7 @@ export function StatsRow({ stats }: { stats: Stat[] }) {
               </div>
               {hasChange && (
                 <div className={cn(
-                  "inline-flex items-center gap-1 rounded-[8px] px-2.5 py-1 font-medium text-sm -mr-[5px]",
+                  "inline-flex items-center gap-1 rounded-[8px] px-2.5 py-1 font-medium text-sm "inline-flex items-center gap-1 rounded-[8px] px-2.5 py-1 font-medium text-sm -mr-[7px]",",
                   isPositive
                     ? "bg-[rgba(34,179,87,0.1)] text-[#22B357]"
                     : "bg-[rgba(229,62,62,0.1)] text-[#E53E3E]"
