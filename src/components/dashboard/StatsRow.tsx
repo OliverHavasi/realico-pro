@@ -33,7 +33,7 @@ export function StatsRow({ stats }: { stats: Stat[] }) {
                 </div>
               )}
             </div>
-            <span className="text-4xl font-bold tracking-tight leading-none text-foreground">{stat.value}</span>
+            <span className="text-4xl font-semibold tracking-tight leading-none text-foreground">{stat.value}</span>
             <span className="text-sm font-medium text-muted-foreground mt-1.5">{stat.label}</span>
           </div>
         );
