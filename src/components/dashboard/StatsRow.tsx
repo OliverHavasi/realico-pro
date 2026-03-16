@@ -16,17 +16,17 @@ export function StatsRow({ stats }: { stats: Stat[] }) {
         const isPositive = (stat.change ?? 0) > 0;
         const hasChange = stat.change !== undefined && stat.change !== 0;
         return (
-          <div key={`${stat.label}-${i}`} className="glass-card p-6 flex flex-col gap-3">
-            <div className="flex items-center justify-between">
+          <div key={`${stat.label}-${i}`} className="glass-card p-6 flex flex-col gap-3 relative">
+            <div className="flex items-start justify-between">
               <div className="h-12 w-12 rounded-full bg-[#fdf8eb] dark:bg-[hsl(0_0%_20%)] flex items-center justify-center">
                 <stat.icon className="h-6 w-6 text-primary dark:text-primary" strokeWidth={1.5} />
               </div>
               {hasChange && (
                 <div className={cn(
-                  "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-semibold",
+                  "inline-flex items-center gap-1 rounded-lg px-2.5 py-1 text-[11px] font-semibold",
                   isPositive
-                    ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
-                    : "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400"
+                    ? "bg-[rgba(34,179,87,0.1)] text-[#22B357]"
+                    : "bg-[rgba(229,62,62,0.1)] text-[#E53E3E]"
                 )}>
                   {isPositive ? <TrendingUp className="h-3 w-3" /> : <TrendingDown className="h-3 w-3" />}
                   {Math.abs(stat.change!)}%
