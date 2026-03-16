@@ -17,7 +17,7 @@ export function StatsRow({ stats }: { stats: Stat[] }) {
         const hasChange = stat.change !== undefined && stat.change !== 0;
         return (
           <div key={`${stat.label}-${i}`} className="glass-card p-5 flex flex-col">
-            <div className="flex items-start justify-between mb-4">
+            <div className="flex items-start justify-between mb-6">
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <stat.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
               </div>
