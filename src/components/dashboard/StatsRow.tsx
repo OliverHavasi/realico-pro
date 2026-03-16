@@ -18,8 +18,8 @@ export function StatsRow({ stats }: { stats: Stat[] }) {
         return (
           <div key={`${stat.label}-${i}`} className="glass-card px-5 pt-4 pb-5 flex flex-col">
             <div className="flex items-start justify-between mb-4 -mt-1">
-              <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center -ml-[5px]">
-                <stat.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
+              <div className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center -ml-[5px]">
+                <stat.icon className="h-[18px] w-[18px] text-primary" strokeWidth={1.5} />
               </div>
               {hasChange && (
                 <div className={cn(
