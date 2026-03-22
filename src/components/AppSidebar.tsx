@@ -59,7 +59,7 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon" variant="floating" className="border-none">
       {/* Logo - sits on the background, outside the white card */}
-      <div className={`h-14 flex items-center ${collapsed ? "justify-center px-2" : "px-5"} transition-all duration-300`}>
+      <div className={`h-14 flex items-center -mt-[20px] ${collapsed ? "justify-center px-2" : "px-5"} transition-all duration-300`}>
         <img
           src={logoSrc}
           alt="Realico X"
