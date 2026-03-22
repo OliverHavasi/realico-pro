@@ -63,7 +63,7 @@ export function AppSidebar() {
         <img
           src={logoSrc}
           alt="Realico PRO"
-          className={`${collapsed ? "h-6 w-6 object-cover object-left" : "h-[32px] w-auto"} object-contain transition-all duration-300`}
+          className={`${collapsed ? "h-5 w-5 object-cover object-left" : "h-[24px] w-auto"} object-contain transition-all duration-300`}
         />
       </div>
 
